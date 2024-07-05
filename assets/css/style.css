@@ -113,7 +113,6 @@ figcaption {
 
 body {
     background-color: var(--white);
-    width: 100%;
     -ms-overflow-style: none;
     overflow-x: hidden;
 }
@@ -233,6 +232,7 @@ select {
 /* header */
 #header {
     position: sticky;
+    width: inherit;
     top: 0;
     height: 300px;
     z-index: 2;
@@ -241,7 +241,7 @@ select {
 .header__inner {
     margin: 30px;
     font-size: 16px;
-    width: 100%;
+    width: inherit;
     display: flex;
     justify-content: space-between;
     margin-bottom: 7.7vh;
