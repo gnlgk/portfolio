@@ -1,0 +1,492 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+@import url('https://gist.githubusercontent.com/mfd/614e2e80a22b878bde63cb471cbe677e/raw/eef2aabfd0d588d43285431186a0cf70305ceb80/sanfrancisco-font.css');
+
+
+
+:root {
+    --fontEng: "Abel", sans-serif;
+    --fontKor: "Iropke Batang", sans-serif;
+    --fontSF: "San Francisco";
+
+    --mainBg: #F5F7F8;
+    --pointColor: #F4CE14;
+    --pointBg: #ededff;
+
+    --primaryColor: #495E57;
+    /* 새로운 주요 색상 */
+    --secondaryColor: #45474B;
+    /* 새로운 보조 색상 */
+    --accentColor: #F4CE14;
+    /* 강조 색상 */
+    --backgroundLight: #F5F7F8;
+    /* 밝은 배경색 */
+
+    --black: #000;
+    --black100: #111;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #555;
+    --black600: #666;
+    --black700: #797979;
+
+    --white: #fff;
+    --white100: #f9f9f9;
+    --white200: #eeeeee;
+    --white300: #dfdfdf;
+    --white400: #cfcfcf;
+    --white500: #c0c0c0;
+
+
+    /* 폰트 셋팅 */
+    font-family: var(--fontEng);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+
+    /* 모든 이미지 */
+    --snsInsta: url(../img/sns-insta.svg);
+    --snsGit: url(../img/sns-git.svg);
+    --snsYoutube: url(../img/sns-youtube.svg);
+    --snsFigma: url(../img/sns-figma.svg);
+    --arrow: url(../svg/arrow.svg);
+
+    --vh: 9.450000000000001px;
+
+    /* 폰트 최적화 */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/* border-box 초기화 */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 공백 초기화 */
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    width: 100%;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    body {
+        display: none;
+    }
+}
+
+/* // 폰트 초기화  */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--fontEng), var(--fontKor), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
+/* // 링크 초기화 */
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* // 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* // 디자인 초기화 */
+input,
+textarea,
+button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    font-size: 16px;
+    border: 0;
+}
+
+/* // 스킵메뉴 */
+#skip a {
+    position: absolute;
+    left: 10px;
+    top: -92px;
+    z-index: 100000;
+    font-size: 1rem;
+    padding: 10px 30px;
+    color: var(--white);
+    background: var(--black);
+}
+
+#skip a:focus,
+#skip a:active {
+    top: 10px;
+}
+
+/* // 글씨 숨기기 */
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* // IR(Image Replacement) */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    white-space: nowrap;
+}
+
+.container {
+    max-width: 97%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* header */
+#header {
+    position: sticky;
+    top: 0;
+    height: 300px;
+    z-index: 2;
+}
+
+.header__inner {
+    margin: 30px;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7.7vh;
+}
+
+.header__inner .logo {
+    fill: var(--white);
+    display: block;
+}
+
+.header__inner .logo a .logo__img {
+    width: clamp(344px, 24vw, 1000px);
+    height: clamp(60px, 4vw, 400px);
+    background-image: url(/assets/svg/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: block;
+    transform: translate3d(0, 0, 0);
+}
+
+.header__inner .nav {}
+
+.header__inner .nav .nav__menu>ul {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.header__inner .nav .nav__menu>ul>li {
+    padding-left: 24px;
+}
+
+.header__inner .nav .nav__menu>ul>li>a {
+    font-size: 16px;
+    line-height: 151%;
+}
+
+.nav__msg {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+}
+
+.nav__msg>ul {
+    text-align: right;
+}
+
+.nav__msg>ul>li {
+    font-family: var(--fontKor);
+    font-size: 16px;
+    line-height: 151%;
+}
+
+/* main */
+.main__inner {}
+
+.main__inner .main__cont {
+    width: 100vw;
+    height: 4000px;
+    overflow: hidden;
+}
+
+#astronauta {
+    width: 100%;
+    height: 300%;
+    /* height: calc(var(--vh, 1vh) * 100); */
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-48%);
+
+}
+
+#astronauta img {
+    display: block;
+    width: clamp(400px, 30vw, 99999px);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+@media (max-width:1800px) {
+    #astronauta {
+        transform: translateY(-43%);
+    }
+}
+
+#cielo {
+    position: relative;
+    z-index: -1;
+    margin: 0 30px;
+    height: 100%;
+    top: 0px;
+}
+
+#sfondo_black {
+    background: var(--black);
+    width: 100%;
+    height: 300%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+/* 
+#cielo img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    object-fit: fill;
+} */
+
+
+
+/* 
+.main__inner .main__cont .main__img {
+    width: 100%;
+    height: 85.27vw;
+    background-image: url(/assets/img/sky.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main__inner .main__cont .main__eye {
+    width: clamp(524px, 30vw, 99999px);
+    height: clamp(852px, 48vw, 100%);
+    position: absolute;
+    top: -28vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(/assets/img/astronauta.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.main__first {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 213px 135px;
+    margin-top: 30px;
+}
+
+.first__text {}
+
+.main__first .first__text>ul {}
+
+.main__first .first__text>ul>li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main__first .first__text>ul>li>p {
+    font-family: var(--fontSF);
+    font-size: 12.25vw;
+    line-height: 109%;
+}
+
+.img1 {
+    width: 25vw;
+    height: 9.2vw;
+    position: relative;
+    top: 74px;
+    border-radius: 200px;
+    background-image: url(/assets/img/first1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img2 {
+    width: 18vw;
+    height: 9.2vw;
+    position: relative;
+    top: 74px;
+    border-radius: 200px;
+    background-image: url(/assets/img/first2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img3 {
+    width: 28vw;
+    height: 9.2vw;
+    position: relative;
+    top: 74px;
+    border-radius: 200px;
+    background-image: url(/assets/img/first3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img4 {
+    width: 48vw;
+    height: 9.2vw;
+    position: relative;
+    top: 74px;
+    border-radius: 200px;
+    background-image: url(/assets/img/first4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec__text {}
+
+.sec__text .sec__title {
+    font-size: 2vw;
+    text-align: center;
+    margin: 168px;
+}
+
+.sec__text .sec__msg {
+    text-align: right;
+}
+
+.sec__text .sec__msg>ul {
+    display: inline-block;
+}
+
+.sec__text .sec__msg>ul>li {
+    font-size: 2.3vw;
+    font-family: var(--fontSF);
+    text-align: left;
+}
+
+.sec__text .sec__profile {
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile__photo {
+    width: 35vw;
+    height: 44vw;
+
+    background-image: url(/assets/img/photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile__msg {
+    font-size: 16px;
+    line-height: 151%;
+    margin-left: 33px;
+    font-family: var(--fontKor);
+}
