@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Brighton vintage';
+    src: url('Brightonvintage-Regular.woff2') format('woff2'),
+        url('Brightonvintage-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banery';
+    src: url('Banery-Regular.woff2') format('woff2'),
+        url('Banery-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rosalina';
+    src: url('Rosalina-Regular.woff2') format('woff2'),
+        url('Rosalina-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
