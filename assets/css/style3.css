@@ -305,6 +305,7 @@ body {
 #section3 {
     background-color: var(--black150);
     padding: 8vw;
+    margin: auto;
 }
 
 #section3 .sec__title {
@@ -316,16 +317,25 @@ body {
 
 .skill {
     display: flex;
+    width: 100%;
+    gap: 25px;
 }
 
-.columns {}
+.columns {
+    width: 33%;
+    transform-origin: bottom left;
+}
 
-.column {}
+.column {
+    width: 120%;
+    margin-bottom: 25px;
+    transform-origin: bottom left;
+
+}
 
 .column .box {
-    margin: 40px 20px;
-    width: 300px;
-    height: 300px;
+    width: 85%;
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     padding: 35px;
     border: 1px solid #363636;
@@ -336,20 +346,29 @@ body {
 }
 
 .column .box .item {
+
     color: #fff;
     display: flex;
     justify-content: space-between;
     text-align: center;
-
+    font-family: "Starife Demo";
 }
 
 .column .box .item:nth-child(2) {
     justify-content: center;
-    font-size: 80px;
+    font-size: 50px;
     letter-spacing: 1.7%;
 }
 
 .column .box .item span {
     font-size: 20px;
     color: #747475;
+}
+
+.columns.right {
+    transform-origin: bottom right;
+}
+
+.columns.right .column {
+    transform-origin: bottom right;
 }
