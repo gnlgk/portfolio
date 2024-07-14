@@ -1,25 +1,61 @@
 @font-face {
-    font-family: 'Brighton vintage';
-    src: url('Brightonvintage-Regular.woff2') format('woff2'),
-        url('Brightonvintage-Regular.woff') format('woff');
+    font-family: 'Brilliantte Presonal Use Only';
+    src: url('BrillianttePresonalUseOnly.woff2') format('woff2'),
+        url('BrillianttePresonalUseOnly.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Banery';
-    src: url('Banery-Regular.woff2') format('woff2'),
-        url('Banery-Regular.woff') format('woff');
+    font-family: 'Callista';
+    src: url('Callista.woff2') format('woff2'),
+        url('Callista.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosalina';
-    src: url('Rosalina-Regular.woff2') format('woff2'),
-        url('Rosalina-Regular.woff') format('woff');
+    font-family: 'Obstacle';
+    src: url('ObstacleRegular.woff2') format('woff2'),
+        url('ObstacleRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hoky Mint';
+    src: url('HokyMint-Regular.woff2') format('woff2'),
+        url('HokyMint-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dalmais';
+    src: url('Dalmais.woff2') format('woff2'),
+        url('Dalmais.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kallisa';
+    src: url('Kallisa.woff2') format('woff2'),
+        url('Kallisa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tryna No. 5';
+    src: url('TrynaNo5.woff2') format('woff2'),
+        url('TrynaNo5.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
