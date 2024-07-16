@@ -4,6 +4,23 @@
 @import url('https://gist.githubusercontent.com/mfd/614e2e80a22b878bde63cb471cbe677e/raw/eef2aabfd0d588d43285431186a0cf70305ceb80/sanfrancisco-font.css');
 @import url('https://rsms.me/inter/inter.css');
 
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredericka+the+Great&family=Rubik+Glitch+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Glitch+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+
+
 @font-face {
     font-family: 'SFProText';
     src: url('../font/SFProText-Black.woff2') format('woff2'),
@@ -168,7 +185,14 @@
 
 /* SFProText */
 
-
+@font-face {
+    font-family: 'Rosalina';
+    src: url('../font/Rosalina-Regular.woff2') format('woff2'),
+        url('../font/Rosalina-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 
@@ -215,6 +239,15 @@
     font-family: 'Tryna No. 5';
     src: url('../font/TrynaNo5.woff2') format('woff2'),
         url('../font/TrynaNo5.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ErosRomano';
+    src: url('../font2/ErosRomanoRegular.woff2') format('woff2'),
+        url('../font2/ErosRomanoRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

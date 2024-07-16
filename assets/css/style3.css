@@ -198,7 +198,7 @@ body {
 }
 
 .sec2__text li:nth-child(1) .img {
-    background-image: url(../img/first1.png);
+    background-image: url(../img/sky-min.png);
     top: -20vw;
 }
 
@@ -208,12 +208,12 @@ body {
 }
 
 .sec2__text li:nth-child(3) .img {
-    background-image: url(../img/first3.png);
+    background-image: url(../img/sky-min.png);
     top: -38vw;
 }
 
 .sec2__text li:nth-child(4) .img {
-    background-image: url(../img/first4.png);
+    background-image: url(../img/first3.png);
     top: -47vw;
 }
 
@@ -252,6 +252,7 @@ body {
 
 .profile__photo {
     position: relative;
+    border-radius: 20px;
     width: 45%;
     padding-bottom: 56.25%;
     /* background: #000; */
@@ -318,7 +319,7 @@ body {
 .skill {
     display: flex;
     width: 100%;
-    gap: 25px;
+    gap: 30px;
 }
 
 .columns {
@@ -327,14 +328,14 @@ body {
 }
 
 .column {
-    width: 120%;
-    margin-bottom: 25px;
+    width: 100%;
+    margin-bottom: 30px;
     transform-origin: bottom left;
 
 }
 
 .column .box {
-    width: 85%;
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 20px;
     padding: 35px;
@@ -346,18 +347,95 @@ body {
 }
 
 .column .box .item {
-
     color: #fff;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    font-family: "Starife Demo";
 }
 
 .column .box .item:nth-child(2) {
     justify-content: center;
-    font-size: 50px;
-    letter-spacing: 1.7%;
+
+}
+
+.column .box .item.html {
+    font-family: "Almendra Display", serif;
+    font-size: 6vw;
+}
+
+.column .box .item.css {
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 5vw;
+}
+
+.column .box .item.js {
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 4vw;
+    line-height: 97%;
+    letter-spacing: 1.5px;
+}
+
+.column .box .item.php {
+    font-family: "Fredericka the Great", serif;
+    font-size: 6vw;
+}
+
+.column .box .item.jq {
+    font-family: "Codystar", sans-serif;
+    font-size: 5vw;
+}
+
+.column .box .item.python {
+    font-family: "Griffy", system-ui;
+    font-size: 5vw;
+}
+
+.column .box .item.react {
+    font-family: "Rubik Puddles", system-ui;
+    font-size: 5vw;
+}
+
+.column .box .item.vue {
+    font-family: "Rubik Glitch", system-ui;
+    font-size: 6vw;
+    letter-spacing: 5px;
+}
+
+.column .box .item.sass {
+    font-family: "Moirai One", system-ui;
+    font-size: 6vw;
+    letter-spacing: 2px;
+}
+
+.column .box .item.my {
+    font-family: "Plaster", system-ui;
+    font-size: 5vw;
+}
+
+.column .box .item.mongo {
+    font-family: "Rubik Glitch Pop", system-ui;
+    font-size: 5vw;
+    line-height: 120%;
+}
+
+.column .box .item.node {
+    font-family: "Foldit", sans-serif;
+    font-size: 6vw;
+}
+
+.column .box .item.next {
+    font-family: "Kablammo", system-ui;
+    font-size: 5vw;
+}
+
+.column .box .item.fig {
+    font-family: "Rubik Beastly", system-ui;
+    font-size: 5vw;
+}
+
+.column .box .item.git {
+    font-family: "Splash", cursive;
+    font-size: 4vw;
 }
 
 .column .box .item span {
@@ -371,4 +449,31 @@ body {
 
 .columns.right .column {
     transform-origin: bottom right;
+}
+
+/* #section4 */
+#section4 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 300%;
+    background: linear-gradient(0deg, blue, green, red);
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#section4 .title {
+    font-size: 30vw;
+    font-family: var(--fontSF);
+    text-transform: uppercase;
+    line-height: 109%;
+    color: var(--white);
+    margin-left: 10vw;
+}
+
+.sec4__cont {
+    width: 100%;
+    height: 100vh;
+
 }

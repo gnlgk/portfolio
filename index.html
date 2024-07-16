@@ -120,7 +120,7 @@
                                 <span>01.</span>
                                 <span>HTML</span>
                             </div>
-                            <div class="item">HTML</div>
+                            <div class="item html">HTML</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -134,7 +134,7 @@
                                 <span>04.</span>
                                 <span>PHP</span>
                             </div>
-                            <div class="item">PHP</div>
+                            <div class="item php">PHP</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -148,7 +148,7 @@
                                 <span>07.</span>
                                 <span>REACT</span>
                             </div>
-                            <div class="item">REACT</div>
+                            <div class="item react">REACT</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -162,7 +162,7 @@
                                 <span>10.</span>
                                 <span>MYSQL</span>
                             </div>
-                            <div class="item">MYSQL</div>
+                            <div class="item my">MYSQL</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -176,7 +176,7 @@
                                 <span>13.</span>
                                 <span>NEXT.JS</span>
                             </div>
-                            <div class="item">NEXT.JS</div>
+                            <div class="item next">NEXT.JS</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -193,7 +193,7 @@
                                 <span>02.</span>
                                 <span>CSS</span>
                             </div>
-                            <div class="item">CSS</div>
+                            <div class="item css">CSS</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -207,7 +207,7 @@
                                 <span>05.</span>
                                 <span>jQUERY</span>
                             </div>
-                            <div class="item">jQUERY</div>
+                            <div class="item jq">jQUERY</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -221,7 +221,7 @@
                                 <span>08.</span>
                                 <span>VUE</span>
                             </div>
-                            <div class="item">VUE</div>
+                            <div class="item vue">VUE</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -235,7 +235,7 @@
                                 <span>11.</span>
                                 <span>MONGO DB</span>
                             </div>
-                            <div class="item">MONGO DB</div>
+                            <div class="item mongo">MONGO DB</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -249,7 +249,7 @@
                                 <span>14.</span>
                                 <span>FIGMA</span>
                             </div>
-                            <div class="item">FIGMA</div>
+                            <div class="item fig">FIGMA</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -266,7 +266,7 @@
                                 <span>03.</span>
                                 <span>JAVA SCRIPT</span>
                             </div>
-                            <div class="item">JAVA<br />SCRIPT</div>
+                            <div class="item js">JAVA<br />SCRIPT</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -280,7 +280,7 @@
                                 <span>06.</span>
                                 <span>PYTHON</span>
                             </div>
-                            <div class="item">PYTHON</div>
+                            <div class="item python">PYTHON</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -294,7 +294,7 @@
                                 <span>09.</span>
                                 <span>SASS</span>
                             </div>
-                            <div class="item">SASS</div>
+                            <div class="item sass">SASS</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -308,7 +308,7 @@
                                 <span>12.</span>
                                 <span>NODE.JS</span>
                             </div>
-                            <div class="item">NODE.JS</div>
+                            <div class="item node">NODE.JS</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -322,7 +322,7 @@
                                 <span>15.</span>
                                 <span>GITHUB</span>
                             </div>
-                            <div class="item">GITHUB</div>
+                            <div class="item git">GITHUB</div>
                             <div class="item">
                                 <span>CLASS</span>
                                 <span>2024</span>
@@ -335,7 +335,14 @@
             </div>
 
         </div>
-        <div id="section4"></div>
+        <div id="section4">
+            <span class="title">portfolio</span>
+            <div class="sec4__cont">
+                <section class="content1">2</section>
+                <section class="content2">2</section>
+                <section class="content3">3</section>
+            </div>
+        </div>
         <div id="section5"></div>
     </div>
     <aside id="parallax__info">
@@ -369,134 +376,150 @@
 
     <script>
 
-        // gsap.set("#section1 .nav__msg .char", { opacity: 0 })
-        // gsap.set("#header .logo", { opacity: 0 })
-        // gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
-        // gsap.set("#header .menu ul li", { opacity: 0 })
+        gsap.set("#section1 .nav__msg .char", { opacity: 0 })
+        gsap.set("#header .logo", { opacity: 0 })
+        gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
+        gsap.set("#header .menu ul li", { opacity: 0 })
 
-        // const tl = gsap.timeline({
-        //     onComplete: function () {
-        //         lenis.stop();
-        //     }
-        // });
-
-
-
-        // const timerId = setTimeout(() => {
-
-        //     tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-        //     tl.to("#header .logo", { opacity: 1, duration: 2 })
-        //     tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-        //     tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
-        //     tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
-        //     tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
-        //     tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header h1", { position: "fixed" })
-        //     tl.to("#header .menu", { position: "fixed" })
-        //     tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
-
-        //         .eventCallback("onComplete", () => {
-        //             lenis.start();
-        //         });
-        // }, 2000);
+        const tl = gsap.timeline({
+            onComplete: function () {
+                lenis.stop();
+            }
+        });
 
 
-        // //sec2
-        // const anim2 = gsap.timeline();
 
-        // gsap.utils.toArray(".sec2__text .word").forEach(item => {
-        //     anim2.fromTo(item, {
-        //         opacity: 0.1,
-        //     }, {
-        //         opacity: 1,
-        //         ease: "none",
-        //         delay: 1,
-        //         scrollTrigger: {
-        //             trigger: item,
-        //             start: "top 70%",
-        //             end: "top 30%",
-        //             scrub: 1,
-        //             markers: false
-        //         }
-        //     })
-        // });
+        const timerId = setTimeout(() => {
+
+            tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
+            tl.to("#header .logo", { opacity: 1, duration: 2 })
+            tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
+            tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
+            tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
+            tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
+            tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
+            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
+            tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
+            tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header h1", { position: "fixed" })
+            tl.to("#header .menu", { position: "fixed" })
+            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
+
+                .eventCallback("onComplete", () => {
+                    lenis.start();
+                });
+        }, 2000);
 
 
-        // gsap.set("#section2 .sec__title .char", { opacity: 0, y: 20 })
+        //sec2
+        const anim2 = gsap.timeline();
 
-        // const ani1 = gsap.timeline();
-        // ani1.to("#section2 .sec__title .char", { stagger: 0.01, duration: 0.8, y: 0, opacity: 1, ease: "power3.out" })
+        gsap.utils.toArray(".sec2__text .word").forEach(item => {
+            anim2.fromTo(item, {
+                opacity: 0.1,
+            }, {
+                opacity: 1,
+                ease: "none",
+                delay: 1,
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 70%",
+                    end: "top 30%",
+                    scrub: 1,
+                    markers: false
+                }
+            })
+        });
+
+
+        gsap.set("#section2 .sec__title .char", { opacity: 0, y: 20 })
+
+        const ani1 = gsap.timeline();
+        ani1.to("#section2 .sec__title .char", { stagger: 0.01, duration: 0.8, y: 0, opacity: 1, ease: "power3.out" })
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section2 .sec__title .char",
+            start: "top center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: false
+        });
+
+
+        gsap.set("#section2 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
+
+        const ani2 = gsap.timeline();
+        ani1.to("#section2 .sec__msg .char", { stagger: 0.01, duration: 0.8, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section2 .sec__msg .char",
+            start: "top center",
+            end: "bottom top",
+            markers: false
+        });
+
+        // const ani3 = gsap.timeline();
+        // ani3.to("#section2 .profile__photo", { x: 10, ease: "power1.inOut", duration: 0.5, }, "a")
+        // ani3.to("#section2 .profile__photo img", { y: -100, width: "100%", ease: "power1.inOut", duration: 0.5, }, "a")
+        //     .to("#section2 .profile__msg", { x: 200, ease: "power1.inOut", duration: 0.8, })
 
         // ScrollTrigger.create({
-        //     animation: ani1,
-        //     trigger: "#section2 .sec__title .char",
-        //     start: "top bottom",
+        //     animation: ani3,
+        //     trigger: ".sec2__text3",
+        //     start: "top center",
         //     end: "bottom top",
-        //     markers: true
+        //     scrub: true,
+        //     markers: true,
         // });
 
+        function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // gsap.set("#section2 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
+            // document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
 
-        // const ani2 = gsap.timeline();
-        // ani1.to("#section2 .sec__msg .char", { stagger: 0.01, duration: 0.8, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+            document.querySelectorAll(".sec__profile").forEach(item => {
+                const target1 = item.querySelector(".profile__photo .img");
+                const target2 = item.querySelector(".profile__msg");
+                // const target3 = item.querySelector(".profile__photo .img");
 
-        // ScrollTrigger.create({
-        //     animation: ani2,
-        //     trigger: "#section2 .sec__msg .char",
-        //     start: "top bottom",
-        //     end: "bottom top",
-        //     markers: false
-        // });
+                let offset1 = (scrollTop - item.offsetTop) * 0.02;
+                let offset2 = (scrollTop - item.offsetTop) * 0.08; //더빨리 움직임
+                // let offset3 = (scrollTop - item.offsetTop) * 0.5; //더빨리 움직임
 
-        // // const ani3 = gsap.timeline();
-        // // ani3.to("#section2 .profile__photo", { x: 10, ease: "power1.inOut", duration: 0.5, }, "a")
-        // // ani3.to("#section2 .profile__photo img", { y: -100, width: "100%", ease: "power1.inOut", duration: 0.5, }, "a")
-        // //     .to("#section2 .profile__msg", { x: 200, ease: "power1.inOut", duration: 0.8, })
+                // target1.style.transform = `translateY(${offset}px)`
+                // target2.style.transform = `translateX(${offset2}px)`
+                console.log(offset1)
 
-        // // ScrollTrigger.create({
-        // //     animation: ani3,
-        // //     trigger: ".sec2__text3",
-        // //     start: "top center",
-        // //     end: "bottom top",
-        // //     scrub: true,
-        // //     markers: true,
-        // // });
-
-        // function scroll() {
-        //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        //     // document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
-
-        //     document.querySelectorAll(".sec__profile").forEach(item => {
-        //         const target1 = item.querySelector(".profile__photo .img");
-        //         const target2 = item.querySelector(".profile__msg");
-        //         // const target3 = item.querySelector(".profile__photo .img");
-
-        //         let offset1 = (scrollTop - item.offsetTop) * 0.02;
-        //         let offset2 = (scrollTop - item.offsetTop) * 0.08; //더빨리 움직임
-        //         // let offset3 = (scrollTop - item.offsetTop) * 0.5; //더빨리 움직임
-
-        //         // target1.style.transform = `translateY(${offset}px)`
-        //         // target2.style.transform = `translateX(${offset2}px)`
-        //         console.log(offset1)
-
-        //         gsap.to(target1, { duration: .5, y: offset1, rotate: (offset1 / 10), ease: "power1.inOut" })
-        //         gsap.to(target2, { duration: .3, x: offset2, ease: "power4.out" })
-        //         // gsap.to(target3, { duration: .3, y: offset3, ease: "expo4.out" })
-        //         //gsap를 사용하여 각 요소들의 위치를 변화를 주어 효과를 사용하였습니다.
-        //     });
-        //     requestAnimationFrame(scroll);
-        // }
-        // scroll();
+                gsap.to(target1, { duration: .5, y: offset1, ease: "power1.inOut" })
+                gsap.to(target2, { duration: .3, x: offset2, ease: "power4.out" })
+                // gsap.to(target3, { duration: .3, y: offset3, ease: "expo4.out" })
+                //gsap를 사용하여 각 요소들의 위치를 변화를 주어 효과를 사용하였습니다.
+            });
+            requestAnimationFrame(scroll);
+        }
+        scroll();
 
         // section3
+
+        gsap.set("#section3 .sec__title .char", { opacity: 0, y: 20 })
+
+        const ani3 = gsap.timeline();
+        ani3.to("#section3 .sec__title .char", { stagger: 0.01, duration: 0.8, y: 0, opacity: 1, ease: "power3.out" })
+
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: "#section3 .sec__title .char",
+            start: "top center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: true
+        });
+
         let images_t = gsap.utils.toArray('.skill .left .column')
 
         images_t.forEach((item, index) => {
@@ -620,6 +643,29 @@
         //         }
         //     )
         // })
+
+        // section4
+        const horizontal = document.querySelector("#section4");
+        const sections = gsap.utils.toArray(".sec4__cont > section");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: horizontal,
+                start: "top top",
+                end: () => "+=" + (horizontal.offsetWidth - innerWidth),
+                pin: true,
+                scrub: 1,
+                snap: {
+                    snapTo: 1 / (sections.length - 1),
+                    inertia: false,
+                    duration: { min: 0.1, max: 0.1 }
+                },
+                invalidateOnRefresh: true,
+                anticipatePin: 1
+            }
+        })
 
     </script>
 
