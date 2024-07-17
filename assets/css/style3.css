@@ -671,4 +671,15 @@ body {
 
 
 
-.sec4__cont3 {}
+#section5 {
+    background-color: var(--black150);
+
+}
+
+#section5 h4 {
+    font-size: 150px;
+    color: var(--white);
+    line-height: 109%;
+    font-family: var(--fontSF);
+    padding: 5vw;
+}

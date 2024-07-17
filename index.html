@@ -399,7 +399,18 @@
                 <div class="one"></div>
             </section>
         </div>
-        <div id="section5"></div>
+        <div id="section5">
+            <h4>COMMENT</h4>
+            <div class="comment">
+                <div class="columns">
+                    <div class="column left">
+
+                    </div>
+                    <div class="column center"></div>
+                    <div class="column right"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <aside id="parallax__info">
         <div class="scroll">scrollTop:<span>0</span>px</div>
@@ -436,42 +447,42 @@
 
         // section1
 
-        // gsap.set("#section1 .nav__msg .char", { opacity: 0 })
-        // gsap.set("#header .logo", { opacity: 0 })
-        // gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
-        // gsap.set("#header .menu ul li", { opacity: 0 })
+        gsap.set("#section1 .nav__msg .char", { opacity: 0 })
+        gsap.set("#header .logo", { opacity: 0 })
+        gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
+        gsap.set("#header .menu ul li", { opacity: 0 })
 
-        // const tl = gsap.timeline({
-        //     onComplete: function () {
-        //         lenis.stop();
-        //     }
-        // });
+        const tl = gsap.timeline({
+            onComplete: function () {
+                lenis.stop();
+            }
+        });
 
 
 
-        // const timerId = setTimeout(() => {
+        const timerId = setTimeout(() => {
 
-        //     tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-        //     tl.to("#header .logo", { opacity: 1, duration: 2 })
-        //     tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-        //     tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
-        //     tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
-        //     tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
-        //     tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
-        //     tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-        //     tl.to("#header h1", { position: "fixed" })
-        //     tl.to("#header .menu", { position: "fixed" })
-        //     tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
+            tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
+            tl.to("#header .logo", { opacity: 1, duration: 2 })
+            tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
+            tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
+            tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
+            tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
+            tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
+            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
+            tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
+            tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+            tl.to("#header h1", { position: "fixed" })
+            tl.to("#header .menu", { position: "fixed" })
+            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
 
-        //         .eventCallback("onComplete", () => {
-        //             lenis.start();
-        //         });
-        // }, 2000);
+                .eventCallback("onComplete", () => {
+                    lenis.start();
+                });
+        }, 2000);
 
 
         // section2
