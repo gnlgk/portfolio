@@ -337,11 +337,67 @@
         </div>
         <div id="section4">
             <span class="title">portfolio</span>
-            <div class="sec4__cont">
-                <section class="content1">2</section>
-                <section class="content2">2</section>
-                <section class="content3">3</section>
-            </div>
+            <section class="sec4__cont1"> </section>
+            <section class="sec4__cont2">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="circle">
+                    <p>Project01</p>
+                    <p>리액트와 파이썬을<br /> 이용한 영화 사이트입니다.</p>
+                    <p>react.js / javascript</p>
+                    <p>VIEW</p>
+                    <span>
+                        <div class="arrow"></div>
+                    </span>
+                </div>
+                <div class="one"></div>
+            </section>
+            <section class="sec4__cont3">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="circle">
+                    <p>Project02</p>
+                    <p>리액트와 파이썬을<br /> 이용한 영화 사이트입니다.</p>
+                    <p>react.js / javascript</p>
+                    <p>VIEW</p>
+                    <span>
+                        <div class="arrow"></div>
+                    </span>
+                </div>
+                <div class="one"></div>
+            </section>
+            <section class="sec4__cont4">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="circle">
+                    <p>Project03</p>
+                    <p>리액트와 파이썬을<br /> 이용한 영화 사이트입니다.</p>
+                    <p>react.js / javascript</p>
+                    <p>VIEW</p>
+                    <span>
+                        <div class="arrow"></div>
+                    </span>
+                </div>
+                <div class="one"></div>
+            </section>
+            <section class="sec4__cont5">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="circle">
+                    <p>Project04</p>
+                    <p>리액트와 파이썬을<br /> 이용한 영화 사이트입니다.</p>
+                    <p>react.js / javascript</p>
+                    <p>VIEW</p>
+                    <span>
+                        <div class="arrow"></div>
+                    </span>
+                </div>
+                <div class="one"></div>
+            </section>
         </div>
         <div id="section5"></div>
     </div>
@@ -353,6 +409,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
@@ -376,45 +433,48 @@
 
     <script>
 
-        gsap.set("#section1 .nav__msg .char", { opacity: 0 })
-        gsap.set("#header .logo", { opacity: 0 })
-        gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
-        gsap.set("#header .menu ul li", { opacity: 0 })
 
-        const tl = gsap.timeline({
-            onComplete: function () {
-                lenis.stop();
-            }
-        });
+        // section1
 
+        // gsap.set("#section1 .nav__msg .char", { opacity: 0 })
+        // gsap.set("#header .logo", { opacity: 0 })
+        // gsap.set("#header h1", { lineHeight: 2.5, y: 0 })
+        // gsap.set("#header .menu ul li", { opacity: 0 })
 
-
-        const timerId = setTimeout(() => {
-
-            tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-            tl.to("#header .logo", { opacity: 1, duration: 2 })
-            tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-            tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
-            tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
-            tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
-            tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
-            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
-            tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
-            tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
-            tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-            tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-            tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
-            tl.to("#header h1", { position: "fixed" })
-            tl.to("#header .menu", { position: "fixed" })
-            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
-
-                .eventCallback("onComplete", () => {
-                    lenis.start();
-                });
-        }, 2000);
+        // const tl = gsap.timeline({
+        //     onComplete: function () {
+        //         lenis.stop();
+        //     }
+        // });
 
 
-        //sec2
+
+        // const timerId = setTimeout(() => {
+
+        //     tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
+        //     tl.to("#header .logo", { opacity: 1, duration: 2 })
+        //     tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
+        //     tl.to("#header h1", { lineHeight: 0.9, duration: 1, ease: "power2.inOut" }, "-=1")
+        //     tl.to("#header h1", { scale: 0.11, duration: 1, ease: "power2.inOut" })
+        //     tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
+        //     tl.to("#header h1", { lineHeight: 3.5, duration: 1, ease: "power2.inOut" })
+        //     tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
+        //     tl.to("#header .menu.bg", { opacity: 1, duration: 1, ease: "power2.inOut" })
+        //     tl.to("#header .logo", { top: 30, duration: 0.6, lineHeight: 0.9, ease: "power2.inOut", delay: 2 }, "cc")
+        //     tl.to("#header .menu", { top: 30, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+        //     tl.to("#header .menu ul li:nth-child(2)", { marginRight: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+        //     tl.to("#header .menu ul li:nth-child(3)", { marginLeft: 50, duration: 0.6, ease: "power2.inOut", delay: 2 }, "cc")
+        //     tl.to("#header h1", { position: "fixed" })
+        //     tl.to("#header .menu", { position: "fixed" })
+        //     tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
+
+        //         .eventCallback("onComplete", () => {
+        //             lenis.start();
+        //         });
+        // }, 2000);
+
+
+        // section2
         const anim2 = gsap.timeline();
 
         gsap.utils.toArray(".sec2__text .word").forEach(item => {
@@ -423,7 +483,7 @@
             }, {
                 opacity: 1,
                 ease: "none",
-                delay: 1,
+                // delay: 1,
                 scrollTrigger: {
                     trigger: item,
                     start: "top 70%",
@@ -438,29 +498,29 @@
         gsap.set("#section2 .sec__title .char", { opacity: 0, y: 20 })
 
         const ani1 = gsap.timeline();
-        ani1.to("#section2 .sec__title .char", { stagger: 0.01, duration: 0.8, y: 0, opacity: 1, ease: "power3.out" })
+        ani1.to("#section2 .sec__title .char", { stagger: 0.01, duration: 0.1, y: 0, opacity: 1, ease: "power3.out" })
 
         ScrollTrigger.create({
             animation: ani1,
             trigger: "#section2 .sec__title .char",
-            start: "top center",
+            start: "-1000% center",
             end: "bottom top",
             toggleActions: "restart none none none",
-            markers: false
+            markers: true
         });
 
 
         gsap.set("#section2 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
 
         const ani2 = gsap.timeline();
-        ani1.to("#section2 .sec__msg .char", { stagger: 0.01, duration: 0.8, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+        ani1.to("#section2 .sec__msg .char", { stagger: 0.01, duration: 0.1, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
 
         ScrollTrigger.create({
             animation: ani2,
             trigger: "#section2 .sec__msg .char",
             start: "top center",
             end: "bottom top",
-            markers: false
+            markers: true
         });
 
         // const ani3 = gsap.timeline();
@@ -480,7 +540,7 @@
         function scroll() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+            document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
 
             document.querySelectorAll(".sec__profile").forEach(item => {
                 const target1 = item.querySelector(".profile__photo .img");
@@ -495,7 +555,7 @@
                 // target2.style.transform = `translateX(${offset2}px)`
                 console.log(offset1)
 
-                gsap.to(target1, { duration: .5, y: offset1, ease: "power1.inOut" })
+                gsap.to(target1, { duration: .1, y: offset1, ease: "power1.inOut" })
                 gsap.to(target2, { duration: .3, x: offset2, ease: "power4.out" })
                 // gsap.to(target3, { duration: .3, y: offset3, ease: "expo4.out" })
                 //gsap를 사용하여 각 요소들의 위치를 변화를 주어 효과를 사용하였습니다.
@@ -517,7 +577,7 @@
             start: "top center",
             end: "bottom top",
             toggleActions: "restart none none none",
-            markers: true
+            markers: false
         });
 
         let images_t = gsap.utils.toArray('.skill .left .column')
@@ -645,8 +705,15 @@
         // })
 
         // section4
+
+
         const horizontal = document.querySelector("#section4");
-        const sections = gsap.utils.toArray(".sec4__cont > section");
+        const sections = gsap.utils.toArray("#section4 > section");
+        const title = document.querySelector("#section4 .title");
+        const img = document.querySelectorAll("#section4 .imgWrap");
+        const circle = document.querySelectorAll("#section4 .circle");
+        const one = document.querySelectorAll("#section4 .one");
+
 
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
@@ -657,15 +724,29 @@
                 end: () => "+=" + (horizontal.offsetWidth - innerWidth),
                 pin: true,
                 scrub: 1,
-                snap: {
-                    snapTo: 1 / (sections.length - 1),
-                    inertia: false,
-                    duration: { min: 0.1, max: 0.1 }
-                },
+                // snap: {
+                //     snapTo: 1 / (sections.length - 1),
+                //     inertia: false,
+                //     duration: { min: 0.1, max: 0.1 }
+                // },
                 invalidateOnRefresh: true,
-                anticipatePin: 1
+                anticipatePin: 1,
+                onUpdate: self => {
+                    const progress = self.progress;
+                    const titleX = progress * (horizontal.scrollWidth - title.clientWidth);
+                    const imgX = progress * (horizontal.scrollWidth - title.clientWidth) / 2;
+                    const circleX = progress * (horizontal.scrollWidth - title.clientWidth) / 3;
+                    console.log(progress)
+                    gsap.to(title, { x: -titleX, ease: "none" });
+                    gsap.to(img, { x: -circleX, ease: "none" });
+                    gsap.to(circle, { x: -imgX, ease: "none" });
+                    gsap.to(one, { x: -imgX, ease: "none" });
+
+                }
             }
-        })
+        });
+
+
 
     </script>
 

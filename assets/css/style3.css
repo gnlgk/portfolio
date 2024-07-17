@@ -213,7 +213,7 @@ body {
 }
 
 .sec2__text li:nth-child(4) .img {
-    background-image: url(../img/first3.png);
+    background-image: url(../img/first4.png);
     top: -47vw;
 }
 
@@ -274,15 +274,15 @@ body {
 }
 
 #parallax__info {
-    display: none;
-    /* position: fixed;
+    display: block;
+    position: fixed;
     left: 20px;
     bottom: 20px;
     z-index: 2000;
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
     padding: 20px;
-    border-radius: 10px; */
+    border-radius: 10px;
 }
 
 .profile__msg {
@@ -455,25 +455,220 @@ body {
 #section4 {
     display: flex;
     flex-wrap: nowrap;
-    width: 300%;
-    background: linear-gradient(0deg, blue, green, red);
-    position: relative;
-    display: flex;
+    width: 500%;
+    background-color: #62a6f8;
     align-items: center;
-    /* justify-content: center; */
+    position: relative;
 }
 
 #section4 .title {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translate(-50%, -50%);
     font-size: 30vw;
     font-family: var(--fontSF);
     text-transform: uppercase;
     line-height: 109%;
     color: var(--white);
-    margin-left: 10vw;
+    display: block;
 }
 
-.sec4__cont {
+#section4>section {
     width: 100%;
     height: 100vh;
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.sec4__cont1 {}
+
+.sec4__cont2 {}
+
+.imgWrap {
+    position: absolute;
+}
+
+.sec4__cont2 .imgWrap {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(50%);
+    width: 26%;
+    height: 56%;
+}
+
+.imgWrap .img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/like1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.sec4__cont3 .imgWrap {
+    top: 10%;
+    right: 60%;
+    transform: translateX(50%);
+    width: 22%;
+    height: 60%;
+}
+
+.sec4__cont3 .imgWrap .img {
+    background-image: url(../img/img2.png);
+}
+
+.sec4__cont4 .imgWrap {
+    top: 60%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 62%;
+}
+
+.sec4__cont4 .imgWrap .img {
+    background-image: url(../img/like2.png);
+}
+
+.sec4__cont5 .imgWrap {
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 62%;
+}
+
+.sec4__cont5 .imgWrap .img {
+    background-image: url(../img/like4.png);
+}
+
+.circle {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    width: 300px;
+    height: 300px;
+    background-color: var(--black);
+    border-radius: 100%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec4__cont3 .circle {
+    top: 50%;
+    left: 40%;
+}
+
+.sec4__cont4 .circle {
+    top: 30%;
+    left: 27%;
+}
+
+.sec4__cont5 .circle {
+    top: 20%;
+    left: 30%;
+}
+
+.circle p {
+    font-family: var(--fontSF);
+    margin: 5px 0;
+}
+
+.circle p:nth-child(1) {
+    font-size: 40px;
+    font-family: var(--fontSF);
+    font-weight: bold;
+    line-height: 109%;
+}
+
+.circle p:nth-child(2) {
+    width: 60%;
+    font-size: 16px;
+    font-family: var(--fontKor);
+    line-height: 132%;
+    text-align: center;
+    /* position: relative; */
+}
+
+.circle p:nth-child(3) {
+    font-size: 16px;
+    font-family: var(--fontSF);
+    line-height: 109%;
+    text-align: center;
+    /* position: relative; */
+}
+
+.circle p:nth-child(4) {
+    font-size: 25px;
+    margin-top: 12px;
+    text-align: left;
+    width: 55%;
+}
+
+.circle span {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    border: 1.5px solid var(--white);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 12px;
+    background-image: url(../img/Arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.one {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--white);
+    border-radius: 100%;
+}
+
+.sec4__cont2 .one {
+    top: 75%;
+    left: 95%;
+}
+
+.sec4__cont3 .one {
+    width: 100px;
+    height: 100px;
+    top: 5%;
+    left: 40%;
+}
+
+.sec4__cont4 .one {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+}
+
+.sec4__cont5 .one {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 40%;
+}
+
+
+
+.sec4__cont3 {}
