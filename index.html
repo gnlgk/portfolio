@@ -402,14 +402,129 @@
         <div id="section5">
             <h4>COMMENT</h4>
             <div class="comment">
-                <div class="columns">
-                    <div class="column left">
-
+                <div class="columns left">
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item">
+                                <div class="text">
+                                    사이트가 너무 이쁩니다.
+                                    저도 이렇게 만들고 싶어요!
+                                </div>
+                                <div class="date">
+                                    2023.04.04 누군가가
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column center"></div>
-                    <div class="column right"></div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns center">
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns right">
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ment">
+                            <div class="item"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="contact">
+            <p>Contact<br /> me.</p>
         </div>
     </div>
     <aside id="parallax__info">
@@ -457,8 +572,6 @@
                 lenis.stop();
             }
         });
-
-
 
         const timerId = setTimeout(() => {
 
@@ -564,7 +677,7 @@
 
                 // target1.style.transform = `translateY(${offset}px)`
                 // target2.style.transform = `translateX(${offset2}px)`
-                console.log(offset1)
+                // console.log(offset1)
 
                 gsap.to(target1, { duration: .1, y: offset1, ease: "power1.inOut" })
                 gsap.to(target2, { duration: .3, x: offset2, ease: "power4.out" })
@@ -717,14 +830,12 @@
 
         // section4
 
-
         const horizontal = document.querySelector("#section4");
         const sections = gsap.utils.toArray("#section4 > section");
         const title = document.querySelector("#section4 .title");
         const img = document.querySelectorAll("#section4 .imgWrap");
         const circle = document.querySelectorAll("#section4 .circle");
         const one = document.querySelectorAll("#section4 .one");
-
 
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
@@ -747,7 +858,7 @@
                     const titleX = progress * (horizontal.scrollWidth - title.clientWidth);
                     const imgX = progress * (horizontal.scrollWidth - title.clientWidth) / 2;
                     const circleX = progress * (horizontal.scrollWidth - title.clientWidth) / 3;
-                    console.log(progress)
+                    // console.log(progress)
                     gsap.to(title, { x: -titleX, ease: "none" });
                     gsap.to(img, { x: -circleX, ease: "none" });
                     gsap.to(circle, { x: -imgX, ease: "none" });
@@ -755,6 +866,53 @@
 
                 }
             }
+        });
+
+        // section5
+
+        gsap.to('#section5 .comment', {
+            scrollTrigger: {
+                trigger: '#section5 .comment',
+                start: 'top-=62 top',
+                end: '+=6000',
+                pin: true,
+                scrub: true,
+                markers: false
+            }
+        });
+
+
+        let columns = gsap.utils.toArray('#section5 .comment .columns');
+
+        gsap.utils.toArray('#section5').forEach(section => {
+            gsap.fromTo(
+                columns,
+                { y: (i) => i % 2 === 0 ? 0 : -(section.scrollHeight - section.querySelector(".column").scrollHeight) / 3 },
+
+                {
+                    y: (i) => i % 2 === 0 ? -(section.scrollHeight - section.querySelector(".column").scrollHeight) / 3 : 0,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true,
+                        markers: true
+                    }
+                }
+            );
+            console.log(section.querySelector(".column").scrollHeight)
+        });
+
+        gsap.utils.toArray('.item').forEach(item => {
+
+            const tl = gsap.timeline({
+                defaults: { ease: "none" },
+                paused: true
+            })
+                .to(item, { backgroundColor: "#00000090", opacity: 1 });
+
+            item.addEventListener("mouseenter", () => tl.play());
+            item.addEventListener("mouseleave", () => tl.reverse());
         });
 
 

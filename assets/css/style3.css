@@ -8,7 +8,7 @@ body {
 #header {
     position: fixed;
     width: 100%;
-    z-index: 2000;
+    /* z-index: 2000; */
 }
 
 .header__inner {
@@ -27,7 +27,7 @@ body {
     /* font-family: "New Shape"; */
 
     line-height: 2.5;
-    z-index: 3000;
+    z-index: 99999;
     /* text-transform: uppercase; */
     text-transform: capitalize;
 }
@@ -46,7 +46,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1500;
+    z-index: 50000;
     width: 100%;
 
     @media (max-width:1280px) {
@@ -58,6 +58,7 @@ body {
     background: #ffffff63;
     backdrop-filter: blur(10px);
     opacity: 0;
+    z-index: 50000;
 }
 
 .header__inner .menu ul {
@@ -68,6 +69,8 @@ body {
 }
 
 .header__inner .menu li a {
+    font-size: 14px;
+    font-family: 'NeoGeoTrial-Light';
     text-transform: uppercase;
     line-height: 151%;
 }
@@ -86,6 +89,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
+    z-index: -1;
 }
 
 #section1 .nav__msg {
@@ -93,7 +97,6 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
     text-align: center;
     font-family: var(--fontKor);
     white-space: nowrap;
@@ -102,7 +105,7 @@ body {
 #section1 .sky {
     max-width: 100%;
     height: 100vh;
-    background-color: var(--black150);
+    /* background-color: var(--black150); */
     background-image: url(../img/sky-min.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,7 +124,6 @@ body {
     transform: translateX(-50%);
     background-color: var(--black);
     /* opacity: 0; */
-    z-index: 30000;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -152,6 +154,8 @@ body {
     background-color: var(--black150);
     color: var(--white);
     padding: 8vw;
+    position: relative;
+    z-index: -1;
     /* margin-top: 2vw; */
 }
 
@@ -459,6 +463,7 @@ body {
     background-color: #62a6f8;
     align-items: center;
     position: relative;
+    z-index: -1;
 }
 
 #section4 .title {
@@ -673,7 +678,8 @@ body {
 
 #section5 {
     background-color: var(--black150);
-
+    width: 100%;
+    overflow: hidden;
 }
 
 #section5 h4 {
@@ -682,4 +688,105 @@ body {
     line-height: 109%;
     font-family: var(--fontSF);
     padding: 5vw;
+}
+
+.comment {
+    display: flex;
+    width: 100%;
+    height: 180vh;
+    gap: 30px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.comment .columns {
+    width: 33%;
+}
+
+.columns:nth-child(2) {
+    /* transform: translateY(-210%); */
+}
+
+.comment .column {
+    width: 100%;
+    margin-bottom: 30px;
+    transform: translateY(0);
+}
+
+.ment {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.column:nth-child(1) .ment {
+    background-image: url(../img/ment1.png);
+}
+
+.column:nth-child(2) .ment {
+    background-image: url(../img/ment2.png);
+}
+
+.column:nth-child(3) .ment {
+    background-image: url(../img/ment3.png);
+}
+
+.column:nth-child(4) .ment {
+    background-image: url(../img/ment4.png);
+}
+
+.column:nth-child(5) .ment {
+    background-image: url(../img/ment5.png);
+}
+
+.column:nth-child(6) .ment {
+    background-image: url(../img/ment6.png);
+}
+
+.column:nth-child(7) .ment {
+    background-image: url(../img/ment7.png);
+}
+
+.column:nth-child(8) .ment {
+    background-image: url(../img/ment8.png);
+}
+
+
+.ment .item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    padding: 20px;
+}
+
+.item .text {
+    font-size: 18px;
+    color: #fff;
+    width: 80%;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.item .date {
+    font-size: 16px;
+    color: #fff;
+    text-align: right;
+}
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #62a6f8;
+}
+
+#contact p {
+    padding: 100px;
+    font-size: 180px;
+    font-family: var(--fontSF);
+    line-height: 100%;
 }
