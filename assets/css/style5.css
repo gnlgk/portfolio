@@ -773,7 +773,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: all 0.3s;
+    transition: opacity 0.3s;
 }
 
 .item__content .text {
