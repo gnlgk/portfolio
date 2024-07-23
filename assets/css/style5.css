@@ -617,7 +617,7 @@ body {
 }
 
 .circle p:nth-child(2) {
-    width: 60%;
+    width: 65%;
     font-size: 16px;
     font-family: var(--fontKor);
     line-height: 132%;
@@ -804,7 +804,7 @@ body {
 }
 
 .item__content:hover {
-    background: #ba5346;
+    background: #9cdac2;
 }
 
 .item__content:hover .text,
@@ -832,7 +832,7 @@ body {
 }
 
 .item__content--small {
-    background-image: url(../img/ment4.png);
+    background-image: url(../img/ment7.png);
     height: 100px;
 }
 
@@ -863,7 +863,7 @@ body {
 }
 
 .item__content--large:hover {
-    background: #da9cd3;
+    background: #9cb4da;
 }
 
 .item__content--large:after {
