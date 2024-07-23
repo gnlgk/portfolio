@@ -804,7 +804,8 @@ body {
 }
 
 .item__content:hover {
-    background: #9cdac2;
+    /* background: #9cdac2; */
+    background: #84bfc4;
 }
 
 .item__content:hover .text,
