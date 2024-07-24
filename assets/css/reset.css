@@ -201,7 +201,7 @@
     font-family: 'NeoGeoTrial-ExtraLight';
     font-weight: normal;
     font-style: normal;
-    src: url('../font/NeoGeoTrial-ExtraLight.woff2') format('woff2');
+    src: url('../font/NeoGeoTrial-ExtraLight.otf') format('woff2');
     font-display: swap;
 }
 
