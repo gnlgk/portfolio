@@ -309,6 +309,31 @@
 }
 
 
+@font-face {
+    font-family: 'AfricaTrial-Cliff';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/AfricaTrial-Cliff.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AfricaTrial-Drylands';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/AfricaTrial-Drylands.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AfricaTrial-Rainfall';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/AfricaTrial-Rainfall.woff2') format('woff2');
+    font-display: swap;
+}
+
+
 
 
 
