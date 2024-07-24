@@ -10,7 +10,7 @@ body {
     position: fixed;
     left: 0%;
     top: 0;
-    z-index: 10900;
+    z-index: 15000;
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,6 +52,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
+    z-index: 13000;
 }
 
 #section1 .nav__msg {
@@ -87,8 +88,7 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    opacity: 1;
-    /* opacity: 0; animation */
+    opacity: 0;
 }
 
 .black__btn {
@@ -124,6 +124,7 @@ body {
     color: var(--white);
     padding: 10vw;
     position: relative;
+    z-index: 2000;
 }
 
 .about .sec__title {
@@ -150,15 +151,15 @@ body {
     font-family: var(--fontKor);
 }
 
-.about .img {
+.about .foto_begin {
     width: 550px;
     height: 760px;
     background-color: #fff;
-    margin: 10% auto;
+    margin: 15% auto 5%;
     position: relative;
 }
 
-.about .img .img1 {
+.about .foto_begin .img_begin1 {
     width: 100%;
     height: 100%;
     background-image: url(../img/jin.jpg);
@@ -167,7 +168,7 @@ body {
 }
 
 
-.about .img .img2 {
+.about .foto_begin .img_begin2 {
     width: 80%;
     height: 90%;
     background-image: url(https://www.danilodemarco.com/img/mystory/albe.webp);
@@ -179,7 +180,7 @@ body {
     transform: rotate(45deg);
 }
 
-.about .img .img3 {
+.about .foto_begin .img_begin3 {
     width: 80%;
     height: 90%;
     background-image: url(https://www.danilodemarco.com/img/adaptive/adaptive_color_sf.webp);
@@ -196,7 +197,7 @@ body {
         padding: 10vw;
     }
 
-    .about .img {
+    .about .foto_begin {
         width: 410px;
         height: 550px;
     }
@@ -213,7 +214,7 @@ body {
         padding: 0 0 0 30%;
     }
 
-    .about .img {
+    .about .foto_begin {
         width: 330px;
         height: 430px;
     }
@@ -236,6 +237,7 @@ body {
     background-color: var(--black);
     padding: 10vw;
     margin: auto;
+
 }
 
 #section3 .sec__title {
@@ -245,201 +247,125 @@ body {
     padding-bottom: 12%;
 }
 
-.skill {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
+.skillWrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
 }
 
-.columns {
-    width: 33%;
-    transform-origin: bottom left;
+.skillWrap .skill .num {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 16px;
+    font-family: "Abel";
+    color: #555;
 }
 
-.column {
-    width: 100%;
-    margin-bottom: 30px;
-    transform-origin: bottom left;
-
-}
-
-.column .box {
+.skillWrap .skill {
+    position: relative;
+    perspective: 1000px;
     width: 100%;
     aspect-ratio: 1 / 1;
+}
+
+.skillWrap .skill .front,
+.skillWrap .skill .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
     border-radius: 20px;
     padding: 7%;
     border: 1px solid #363636;
-    background-color: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    transition: all 0.5s;
-}
-
-.column .box .text {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    font-family: var(--fontKor);
-    font-size: 25px;
-    width: 70%;
-}
-
-.column .box:hover {
-    background-color: #1B1B1B;
-}
-
-.column .box:hover .item,
-.column .box:hover .item span {
-    color: #1B1B1B;
-    opacity: 0;
-}
-
-.column .box:hover .text {
-    display: block;
-}
-
-.column .box .item {
+    font-family: "Almendra Display", serif;
+    font-size: 45px;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
+    text-transform: uppercase;
     text-align: center;
 }
 
-.column .box .item:nth-child(2) {
-    justify-content: center;
-
+.skillWrap .skill .back {
+    transform: rotateY(-180deg);
+    font-size: 14px;
 }
 
-.column .box .item.html {
-    font-family: "Almendra Display", serif;
-    font-size: 6vw;
+.skillWrap .skill:hover .front {
+    transform: rotateY(180deg);
 }
 
-.column .box .item.css {
+.skillWrap .skill:hover .back {
+    transform: rotateY(0);
+}
+
+.skillWrap .skill:nth-child(2) .front h3 {
     font-family: "Sixtyfour", sans-serif;
-    font-size: 5vw;
+    letter-spacing: -5px;
 }
 
-.column .box .item.js {
+.skillWrap .skill:nth-child(3) .front h3 {
     font-family: "Bungee Shade", sans-serif;
-    font-size: 4vw;
-    line-height: 97%;
+    font-size: 35px;
+    line-height: 100%;
     letter-spacing: 1.5px;
 }
 
-.column .box .item.php {
+.skillWrap .skill:nth-child(4) .front h3 {
     font-family: "Fredericka the Great", serif;
-    font-size: 6vw;
 }
 
-.column .box .item.jq {
+.skillWrap .skill:nth-child(5) .front h3 {
     font-family: "Codystar", sans-serif;
-    font-size: 5vw;
+    font-size: 45px;
+
 }
 
-.column .box .item.python {
+.skillWrap .skill:nth-child(6) .front h3 {
     font-family: "Griffy", system-ui;
-    font-size: 5vw;
+    font-size: 45px;
+
 }
 
-.column .box .item.react {
+.skillWrap .skill:nth-child(7) .front h3 {
     font-family: "Rubik Puddles", system-ui;
-    font-size: 5vw;
+    font-size: 45px;
+
 }
 
-.column .box .item.vue {
+.skillWrap .skill:nth-child(8) .front h3 {
     font-family: "Rubik Glitch", system-ui;
-    font-size: 6vw;
     letter-spacing: 5px;
 }
 
-.column .box .item.sass {
+.skillWrap .skill:nth-child(9) .front h3 {
     font-family: "Moirai One", system-ui;
-    font-size: 6vw;
+    font-size: 45px;
     letter-spacing: 2px;
 }
 
-.column .box .item.my {
-    font-family: "Plaster", system-ui;
-    font-size: 5vw;
+.skillWrap .skill:nth-child(10) .front h3 {
+    font-family: "Foldit", sans-serif;
 }
 
-.column .box .item.mongo {
-    font-family: "Rubik Glitch Pop", system-ui;
-    font-size: 5vw;
+.skillWrap .skill:nth-child(11) .front h3 {
+    font-family: "Rubik Beastly", system-ui;
+    font-size: 40px;
     line-height: 120%;
 }
 
-.column .box .item.node {
-    font-family: "Foldit", sans-serif;
-    font-size: 6vw;
-}
-
-.column .box .item.next {
-    font-family: "Kablammo", system-ui;
-    font-size: 5vw;
-}
-
-.column .box .item.fig {
-    font-family: "Rubik Beastly", system-ui;
-    font-size: 5vw;
-}
-
-.column .box .item.git {
+.skillWrap .skill:nth-child(12) .front h3 {
     font-family: "Splash", cursive;
-    font-size: 4vw;
-}
-
-.column .box .item span {
-    font-size: 20px;
-    color: #747475;
-}
-
-.columns.right {
-    transform-origin: bottom right;
-}
-
-.columns.right .column {
-    transform-origin: bottom right;
-}
-
-@media (max-width:1460px) {
-    .column .box .text {
-        font-size: 18px;
-    }
-}
-
-@media (max-width:1080px) {
-    .column .box .text {
-        font-size: 14px;
-    }
-}
-
-@media (max-width:900px) {
-
-    .column .box .item span {
-        font-size: 14px;
-    }
-
-    .column .box .text {
-        /* white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; */
-        font-size: 1.8vw;
-    }
-}
-
-@media (max-width:600px) {
-    .column .box {
-        padding: 0;
-    }
-
+    font-size: 35px;
 }
 
 /* #section4 */
@@ -448,7 +374,8 @@ body {
     display: flex;
     flex-wrap: nowrap;
     width: 500%;
-    background-color: #DAA39C;
+    background-image: url(../img/bg-min.jpg);
+    background-size: cover;
     align-items: center;
     position: relative;
     z-index: -1;
@@ -460,7 +387,7 @@ body {
     right: 30%;
     transform: translate(-50%, -50%);
     font-size: 30vw;
-    font-family: var(--fontNGL);
+    font-family: var(--fontNGE);
     font-weight: lighter;
     text-transform: uppercase;
     line-height: 109%;
@@ -866,7 +793,7 @@ body {
 #contact .contact {
     padding: 100px;
     font-size: 12vw;
-    font-family: var(--fontNGE);
+    font-family: var(--fontNGL);
     line-height: 12.2vw;
 }
 

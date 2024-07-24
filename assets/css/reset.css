@@ -13,10 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Glitch+Pop&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 
@@ -201,7 +198,8 @@
     font-family: 'NeoGeoTrial-ExtraLight';
     font-weight: normal;
     font-style: normal;
-    src: url('../font/NeoGeoTrial-ExtraLight.otf') format('woff2');
+    src: url('../font/NeoGeoTrial-ExtraLight.woff2') format('woff2'),
+        url('../font/NeoGeoTrial-ExtraLight.woff2') format('woff');
     font-display: swap;
 }
 
@@ -209,10 +207,18 @@
     font-family: 'NeoGeoTrial-Light';
     font-weight: normal;
     font-style: normal;
-    src: url('../font/NeoGeoTrial-Light.woff2') format('woff2');
+    src: url('../font/NeoGeoTrial-Light.woff2') format('woff2'),
+        url('../font/NeoGeoTrial-Light.woff') format('woff');
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'NeoGeoTrial-Black';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/NeoGeoTrial-Black.woff2') format('woff2');
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'AfricaTrial-Cliff';
@@ -352,6 +358,7 @@
     --fontLG4: "Starife Demo", sans-serif;
     --fontNGE: 'NeoGeoTrial-ExtraLight';
     --fontNGL: 'NeoGeoTrial-Light';
+    --fontNGB: 'NeoGeoTrial-Black';
 
     --mainBg: #F5F7F8;
     --pointColor: #F4CE14;
