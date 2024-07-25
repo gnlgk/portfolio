@@ -264,7 +264,7 @@
                 </div>
                 <div class="one"></div>
             </section>
-            <section class="sec4__cont5">
+            <section class="sec4__cont6">
                 <div class="imgWrap">
                     <div class="img"></div>
                 </div>
@@ -461,8 +461,8 @@
             tl.to("#header .logo", { opacity: 1, duration: 2 })
             tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
             tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
-            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" })
-            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" })
+            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
+            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
 
                 .eventCallback("onComplete", () => {
                     lenis.start();

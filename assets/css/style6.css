@@ -384,7 +384,7 @@ body {
 #section4 .title {
     position: absolute;
     top: 50%;
-    right: 30%;
+    right: 20%;
     transform: translate(-50%, -50%);
     font-size: 30vw;
     font-family: var(--fontNGE);
@@ -464,6 +464,19 @@ body {
     background-image: url(../img/like4.png);
 }
 
+.sec4__cont6 .imgWrap {
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 65%;
+
+}
+
+.sec4__cont6 .imgWrap .img {
+    background-image: url(../img/like5.png);
+}
+
 .circle {
     position: absolute;
     top: 25%;
@@ -492,6 +505,11 @@ body {
 .sec4__cont5 .circle {
     top: 20%;
     left: 30%;
+}
+
+.sec4__cont6 .circle {
+    top: 40%;
+    left: 80%;
 }
 
 .circle p {
@@ -585,6 +603,13 @@ body {
     width: 120px;
     height: 120px;
     top: 60%;
+    left: 40%;
+}
+
+.sec4__cont6 .one {
+    width: 100px;
+    height: 100px;
+    top: 30%;
     left: 40%;
 }
 
