@@ -4,13 +4,18 @@ body {
     background-color: #ecf3f6;
 }
 
+/* 
+.gsap-marker {
+    z-index: 9999 !important;
+} */
+
 /* header */
 
 #header {
     position: fixed;
     left: 0%;
     top: 0;
-    z-index: 15000;
+    z-index: 20000;
     width: 100%;
     display: flex;
     align-items: center;
@@ -152,8 +157,8 @@ body {
 }
 
 .about .foto_begin {
-    width: 32vw;
-    height: 42vw;
+    width: 35vw;
+    height: 45vw;
     background-color: #fff;
     margin: 15% auto 5%;
     position: relative;
@@ -374,14 +379,14 @@ body {
     background-size: cover;
     align-items: center;
     position: relative;
-    z-index: -1;
+    z-index: 15000;
 }
 
 #section4 .title {
     position: absolute;
     top: 50%;
-    right: 40%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    padding-left: 90vw;
     font-size: 30vw;
     font-family: var(--fontNGE);
     font-weight: lighter;
@@ -425,7 +430,7 @@ body {
 
 .sec4__cont3 .imgWrap {
     top: 10%;
-    right: 60%;
+    right: 50%;
     transform: translateX(50%);
     width: 30%;
     height: 60%;
@@ -490,7 +495,7 @@ body {
 
 .sec4__cont3 .circle {
     top: 50%;
-    left: 40%;
+    left: 30%;
 }
 
 .sec4__cont4 .circle {
@@ -586,7 +591,7 @@ body {
     width: 100px;
     height: 100px;
     top: 5%;
-    left: 40%;
+    left: 30%;
 }
 
 .sec4__cont4 .one {

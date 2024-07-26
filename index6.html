@@ -443,6 +443,50 @@
 
     <script>
 
+        // header
+
+        const headerToWhite = gsap.timeline();
+        headerToWhite.to("#header h1", { color: "#fff", duration: 0.5, ease: "power3.out" });
+        headerToWhite.to("#header .menu ul li", { color: "#fff", duration: 0.5, ease: "power3.out" }, 0);
+
+        const headerToBlack = gsap.timeline();
+        headerToBlack.to("#header h1", { color: "#000", duration: 0.5, ease: "power3.out" });
+        headerToBlack.to("#header .menu ul li", { color: "#000", duration: 0.5, ease: "power3.out" }, 0);
+
+        ScrollTrigger.create({
+            animation: headerToWhite,
+            trigger: '#section2',
+            start: "top 5%",
+            end: "top 30%",
+            toggleActions: "play none play none",
+            scrub: true,
+            markers: false,
+        });
+
+        ScrollTrigger.create({
+            animation: headerToBlack,
+            trigger: '#section4',
+            start: "top 5%",
+            end: () => "+=" + (document.querySelector('#section4').offsetWidth - window.innerWidth),
+            toggleActions: "play none play none",
+            scrub: true,
+            markers: true,
+            onEnter: () => { console.log('Enter section4'); },
+            onLeave: () => { console.log('Leave section4'); }
+        });
+
+        ScrollTrigger.create({
+            animation: headerToWhite,
+            trigger: '#section5 ',
+            start: () => "+=" + (document.querySelector('#section4').offsetWidth - window.innerWidth),
+            end: "top 30%",
+            toggleActions: "play none play none",
+            scrub: true,
+            markers: false,
+            onEnter: () => console.log('Enter section5'),
+            onLeave: () => console.log('Leave section5')
+        });
+
         // section1
 
         gsap.set("#section1 .nav__msg .char", { opacity: 0 })
@@ -485,22 +529,19 @@
 
         // section2
 
+        // const header = gsap.timeline();
+        // header.fromTo("#header h1", { color: "#000" }, { opacity: 1, color: "#fff", duration: 5, ease: "power3.out" }, "cc")
+        // header.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", duration: 5, ease: "power3.out" }, "cc")
 
-
-
-        const header = gsap.timeline();
-        header.fromTo("#header h1", { color: "#000" }, { opacity: 1, color: "#fff", duration: 5, ease: "power3.out" }, "cc")
-        header.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", duration: 5, ease: "power3.out" }, "cc")
-
-        ScrollTrigger.create({
-            animation: header,
-            trigger: '#section2',
-            start: "top 5%",
-            end: "top 30%",
-            toggleActions: "restart none reverse none",
-            scrub: true,
-            markers: false
-        });
+        // ScrollTrigger.create({
+        //     animation: header,
+        //     trigger: '#section2',
+        //     start: "top 5%",
+        //     end: "top 30%",
+        //     toggleActions: "restart none reverse none",
+        //     scrub: true,
+        //     markers: false
+        // });
 
         const anim2 = gsap.timeline();
 
@@ -625,6 +666,7 @@
         //     });
 
         // section3
+
         const skillElements = document.querySelectorAll(".skill");
 
         skillElements.forEach(skillElement => {
@@ -653,7 +695,8 @@
 
         const horizontal = document.querySelector("#section4");
         const sections = gsap.utils.toArray("#section4 > section");
-        const title = document.querySelector("#section4 .title");
+        const title = document.querySelector("#section4 > .title");
+        const section = document.querySelector("#section4 section");
         const img = document.querySelectorAll("#section4 .imgWrap");
         const circle = document.querySelectorAll("#section4 .circle");
         const one = document.querySelectorAll("#section4 .one");
@@ -679,7 +722,7 @@
                     const titleX = progress * (horizontal.scrollWidth - title.clientWidth);
                     const imgX = progress * (horizontal.scrollWidth - title.clientWidth) / 2;
                     const circleX = progress * (horizontal.scrollWidth - title.clientWidth) / 3;
-                    // console.log(progress)
+                    // console.log(titleX)
                     gsap.to(title, { x: -titleX, ease: "none" });
                     gsap.to(img, { x: -circleX, ease: "none" });
                     gsap.to(circle, { x: -imgX, ease: "none" });
@@ -688,6 +731,9 @@
                 }
             }
         });
+        gsap.to(one, { scale: 0.5, duration: 5, ease: "none", yoyo: true, repeat: -1 });
+        gsap.to(img, { opacity: .8, duration: 3, ease: "none", yoyo: true, repeat: -1 });
+
 
         // section5
 
