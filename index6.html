@@ -84,7 +84,7 @@
                         <h3>html</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="90">0%</p>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                         <h3>css</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="90">0%</p>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@
                         <h3>java script</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="80">0%</p>
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                         <h3>php</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="70">0%</p>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@
                         <h3>jQuery</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="90">0%</p>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@
                         <h3>python</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="60">0%</p>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@
                         <h3>react</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="70">0%</p>
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@
                         <h3>vue</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="60">0%</p>
                     </div>
                 </div>
 
@@ -164,7 +164,7 @@
                         <h3>sass</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="90">0%</p>
                     </div>
                 </div>
 
@@ -174,7 +174,7 @@
                         <h3>node.js</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="70">0%</p>
                     </div>
                 </div>
 
@@ -184,7 +184,7 @@
                         <h3>mongo DB</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="80">0%</p>
                     </div>
                 </div>
 
@@ -194,7 +194,7 @@
                         <h3>github</h3>
                     </div>
                     <div class="back">
-                        <p>This effect is a mouseover effect.</p>
+                        <p class="percent" data-percent="80">0%</p>
                     </div>
                 </div>
             </div>
@@ -449,6 +449,7 @@
         gsap.set("#header .logo", { opacity: 0 })
         gsap.set("#header .menu ul li", { opacity: 0 })
 
+
         const tl = gsap.timeline({
             onComplete: function () {
                 lenis.stop();
@@ -460,7 +461,7 @@
             tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
             tl.to("#header .logo", { opacity: 1, duration: 2 })
             tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-            tl.to("#header h1", { rotation: 180, duration: 2, ease: "power2.inOut" })
+            tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
             tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
             tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
 
@@ -469,7 +470,38 @@
                 });
         }, 2000);
 
+
+        gsap.from(".logo", {
+            rotation: 360,
+            scrollTrigger: {
+                trigger: document.body,
+                start: "top #section1",
+                end: "bottom bottom",
+                scrub: true,
+                markers: true
+            }
+        });
+
+
         // section2
+
+
+
+
+        const header = gsap.timeline();
+        header.fromTo("#header h1", { color: "#000" }, { opacity: 1, color: "#fff", duration: 5, ease: "power3.out" }, "cc")
+        header.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", duration: 5, ease: "power3.out" }, "cc")
+
+        ScrollTrigger.create({
+            animation: header,
+            trigger: '#section2',
+            start: "top 5%",
+            end: "top 30%",
+            toggleActions: "restart none reverse none",
+            scrub: true,
+            markers: false
+        });
+
         const anim2 = gsap.timeline();
 
         gsap.utils.toArray(".sec__title .word").forEach(item => {
@@ -490,6 +522,7 @@
         });
 
 
+
         // gsap.set(".about .sec__title .char", { opacity: 0, y: 20 })
 
         // const ani1 = gsap.timeline();
@@ -501,7 +534,7 @@
         //     start: "-1000% center",
         //     end: "bottom top",
         //     toggleActions: "restart none none none",
-        //     markers: true
+        //     markers: false
         // });
 
 
@@ -509,14 +542,26 @@
 
         const ani2 = gsap.timeline();
         ani2.to(".about .sec__msg .char", { stagger: 0.01, duration: 0.2, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
-
         ScrollTrigger.create({
             animation: ani2,
             trigger: ".about .sec__msg .char",
             start: "top center",
             end: "bottom top",
             toggleActions: "restart none none none",
-            markers: true
+            markers: false
+        });
+
+        gsap.set(".foto_begin", { opacity: 0 })
+
+        const ani3 = gsap.timeline();
+        ani3.to(".foto_begin", { opacity: 1, duration: 5, ease: "power3.out" })
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: ".foto_begin",
+            start: "top center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: false
         });
 
         // foto_begin
@@ -529,7 +574,7 @@
                     start: "10% center",
                     end: "25% top",
                     scrub: 1,
-                    // markers: true,
+                    // markers: false,
                 }
             });
 
@@ -549,7 +594,7 @@
                     start: "30% 40%",
                     end: "45% top",
                     scrub: 1,
-                    //markers: true,
+                    //markers: false,
                 }
             });
 
@@ -561,25 +606,48 @@
                 opacity: 0,
             });
 
-        gsap.set(".img_begin1", { opacity: 0.5 })
-        let foto_begin_3 = gsap.timeline
-            ({
-                scrollTrigger:
-                {
-                    trigger: ".foto_begin",
-                    start: "30% 40%",
-                    end: "45% top",
-                    scrub: 1,
-                    //markers: true,
-                }
-            });
+        // gsap.set(".img_begin1", { opacity: 0.5 })
+        // let foto_begin_3 = gsap.timeline
+        //     ({
+        //         scrollTrigger:
+        //         {
+        //             trigger: ".foto_begin",
+        //             start: "30% 40%",
+        //             end: "45% top",
+        //             scrub: 1,
+        //             //markers: false,
+        //         }
+        //     });
 
-        foto_begin_3.to(".img_begin1",
-            {
-                opacity: 1,
-            });
+        // foto_begin_3.to(".img_begin1",
+        //     {
+        //         opacity: 1,
+        //     });
 
         // section3
+        const skillElements = document.querySelectorAll(".skill");
+
+        skillElements.forEach(skillElement => {
+            skillElement.addEventListener("mouseenter", () => {
+                const skill = skillElement.querySelector(".percent");
+                const finalPercent = skill.dataset.percent;
+
+                gsap.fromTo(skill, {
+                    textContent: "0%"
+                }, {
+                    textContent: finalPercent + "%",
+                    snap: "textContent",
+                    scrollTrigger: {
+                        trigger: skill.parentNode,
+                        start: "top bottom-=20%",
+                        end: "bottom top",
+                        toggleActions: "play none none none",
+                    },
+                    ease: "none",
+                    duration: 1
+                });
+            });
+        });
 
         // section4
 
@@ -636,7 +704,7 @@
             start: "top center",
             end: "bottom top",
             toggleActions: "restart none none none",
-            markers: true
+            markers: false
         });
 
     </script>

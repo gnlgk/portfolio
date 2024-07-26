@@ -152,8 +152,8 @@ body {
 }
 
 .about .foto_begin {
-    width: 550px;
-    height: 760px;
+    width: 32vw;
+    height: 42vw;
     background-color: #fff;
     margin: 15% auto 5%;
     position: relative;
@@ -197,10 +197,6 @@ body {
         padding: 10vw;
     }
 
-    .about .foto_begin {
-        width: 410px;
-        height: 550px;
-    }
 }
 
 @media(max-width:764px) {
@@ -214,10 +210,6 @@ body {
         padding: 0 0 0 30%;
     }
 
-    .about .foto_begin {
-        width: 330px;
-        height: 430px;
-    }
 }
 
 @keyframes foldUnfold {
@@ -300,6 +292,10 @@ body {
     font-size: 14px;
 }
 
+.skillWrap .skill .back p {
+    font-size: 50px;
+}
+
 .skillWrap .skill:hover .front {
     transform: rotateY(180deg);
 }
@@ -373,7 +369,7 @@ body {
 #section4 {
     display: flex;
     flex-wrap: nowrap;
-    width: 500%;
+    width: 600%;
     background-image: url(../img/bg-min.jpg);
     background-size: cover;
     align-items: center;
@@ -384,7 +380,7 @@ body {
 #section4 .title {
     position: absolute;
     top: 50%;
-    right: 20%;
+    right: 40%;
     transform: translate(-50%, -50%);
     font-size: 30vw;
     font-family: var(--fontNGE);
@@ -412,7 +408,7 @@ body {
 
 .sec4__cont2 .imgWrap {
     bottom: 5%;
-    left: 50%;
+    left: 20%;
     transform: translateX(50%);
     width: 30%;
     height: 60%;
@@ -480,7 +476,7 @@ body {
 .circle {
     position: absolute;
     top: 25%;
-    left: 80%;
+    left: 50%;
     width: 300px;
     height: 300px;
     background-color: var(--black);
@@ -583,7 +579,7 @@ body {
 
 .sec4__cont2 .one {
     top: 75%;
-    left: 95%;
+    left: 65%;
 }
 
 .sec4__cont3 .one {
