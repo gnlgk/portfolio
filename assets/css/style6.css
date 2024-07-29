@@ -438,12 +438,12 @@ body {
 }
 
 .sec4__cont1 .sec__msg .desc1 {
-    padding: 10% 25% 5% 20%;
+    padding: 10% 0% 10% 30%;
     font-size: 25px;
 }
 
 .sec4__cont1 .sec__msg .desc2 {
-    padding: 0 30% 0 30%;
+    padding: 0 20% 0 40%;
     word-break: keep-all;
     font-size: 16px;
     line-height: 1.7;
