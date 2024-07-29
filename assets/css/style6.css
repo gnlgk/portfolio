@@ -244,6 +244,20 @@ body {
     padding-bottom: 12%;
 }
 
+#section3 .sec__msg {
+    font-family: var(--fontNGL);
+}
+
+#section3 .sec__msg .desc2 {
+    padding: 0 0 10% 40%;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--white);
+    font-family: var(--fontKor);
+}
+
+
 .skillWrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -404,6 +418,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sec4__cont1 {
+    padding: 10vw;
+    align-items: flex-start !important;
+
+
+}
+
+.sec4__cont1 .sec__title {
+    font-size: 16px;
+    text-align: left;
+    color: #999;
+    white-space: nowrap;
+
+}
+
+.sec4__cont1 .sec__msg {
+    font-family: var(--fontKor);
+}
+
+.sec4__cont1 .sec__msg .desc1 {
+    padding: 10% 25% 5% 20%;
+    font-size: 25px;
+}
+
+.sec4__cont1 .sec__msg .desc2 {
+    padding: 0 30% 0 30%;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #010101;
+    font-family: var(--fontKor);
 }
 
 .imgWrap {

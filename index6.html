@@ -77,6 +77,14 @@
             <div class="sec__title split">
                 Skill(2024)
             </div>
+            <div class="sec__msg split">
+                <ul>
+                    <li class="desc2">
+                        이곳에서는 제가 보유한 다양한 기술과 역량을 소개합니다. 저는 끊임없는 학습과 도전을 통해 얻은 기술들로 문제를 해결하고 혁신적인 결과물을 만들어내고자 노력하고 있습니다.
+                        각 기술의 아이콘 위에 마우스를 올리시면 숙련도를 퍼센트로 확인하실 수 있습니다.
+                    </li>
+                </ul>
+            </div>
             <div class="skillWrap">
                 <div class="skill">
                     <div class="front">
@@ -203,7 +211,25 @@
         </div>
         <div id="section4">
             <span class="title">portfolio</span>
-            <section class="sec4__cont1"> </section>
+            <section class="sec4__cont1">
+                <div class="sec__title split">
+                    Site(2024)
+                </div>
+                <div class="sec__msg split">
+                    <ul>
+                        <li class="desc1">
+                            1. PHP를 이용한 연예인 사진 모음 사이트<br />
+                            2. React를 이용한 뮤직 사이트<br />
+                            3. Vue를 이용한 영화 사이트<br />
+                            4. React, node를 이용한 드라이브스루 사이트<br />
+                        </li>
+                        <li class="desc2">
+                            이곳에서는 제가 참여한 프로젝트와 그 성과를 만나보실 수 있습니다. 웹 개발 분야에서 다양한 프로젝트를 수행하며, 세심한 부분까지 신경 써서 독창적이고 효율적인
+                            결과물을 완성했습니다.
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="sec4__cont2">
                 <div class="imgWrap">
                     <div class="img"></div>
@@ -470,7 +496,7 @@
             end: () => "+=" + (document.querySelector('#section4').offsetWidth - window.innerWidth),
             toggleActions: "play none play none",
             scrub: true,
-            markers: true,
+            markers: false,
             onEnter: () => { console.log('Enter section4'); },
             onLeave: () => { console.log('Leave section4'); }
         });
@@ -478,53 +504,53 @@
         ScrollTrigger.create({
             animation: headerToWhite,
             trigger: '#section5 ',
-            start: () => "+=" + (document.querySelector('#section4').offsetWidth - window.innerWidth),
-            end: "top 30%",
+            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
+            end: "top top",
             toggleActions: "play none play none",
             scrub: true,
-            markers: false,
+            markers: true,
             onEnter: () => console.log('Enter section5'),
-            onLeave: () => console.log('Leave section5')
+            onLeave: () => console.log(document.querySelector('#section4').offsetWidth - window.innerWidth)
         });
 
         // section1
 
-        gsap.set("#section1 .nav__msg .char", { opacity: 0 })
-        gsap.set("#header .logo", { opacity: 0 })
-        gsap.set("#header .menu ul li", { opacity: 0 })
+        // gsap.set("#section1 .nav__msg .char", { opacity: 0 })
+        // gsap.set("#header .logo", { opacity: 0 })
+        // gsap.set("#header .menu ul li", { opacity: 0 })
 
 
-        const tl = gsap.timeline({
-            onComplete: function () {
-                lenis.stop();
-            }
-        });
+        // const tl = gsap.timeline({
+        //     onComplete: function () {
+        //         lenis.stop();
+        //     }
+        // });
 
-        const timerId = setTimeout(() => {
+        // const timerId = setTimeout(() => {
 
-            tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-            tl.to("#header .logo", { opacity: 1, duration: 2 })
-            tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-            tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
-            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
-            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
+        //     tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
+        //     tl.to("#header .logo", { opacity: 1, duration: 2 })
+        //     tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
+        //     tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
+        //     tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
+        //     tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
 
-                .eventCallback("onComplete", () => {
-                    lenis.start();
-                });
-        }, 2000);
+        //         .eventCallback("onComplete", () => {
+        //             lenis.start();
+        //         });
+        // }, 2000);
 
 
-        gsap.from(".logo", {
-            rotation: 360,
-            scrollTrigger: {
-                trigger: document.body,
-                start: "top #section1",
-                end: "bottom bottom",
-                scrub: true,
-                markers: true
-            }
-        });
+        // gsap.from(".logo", {
+        //     rotation: 360,
+        //     scrollTrigger: {
+        //         trigger: document.body,
+        //         start: "top #section1",
+        //         end: "bottom bottom",
+        //         scrub: true,
+        //         markers: true
+        //     }
+        // });
 
 
         // section2
@@ -564,19 +590,19 @@
 
 
 
-        // gsap.set(".about .sec__title .char", { opacity: 0, y: 20 })
+        gsap.set(".about .sec__title .char", { opacity: 0, y: 20 })
 
-        // const ani1 = gsap.timeline();
-        // ani1.to(".about .sec__title .char", { stagger: 0.01, duration: 0.5, y: 0, opacity: 1, ease: "power3.out" })
+        const ani1 = gsap.timeline();
+        ani1.to(".about .sec__title .char", { stagger: 0.01, duration: 0.5, y: 0, opacity: 1, ease: "power3.out" })
 
-        // ScrollTrigger.create({
-        //     animation: ani1,
-        //     trigger: ".about .sec__title .char",
-        //     start: "-1000% center",
-        //     end: "bottom top",
-        //     toggleActions: "restart none none none",
-        //     markers: false
-        // });
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: ".about .sec__title .char",
+            start: "-1000% center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: false
+        });
 
 
         gsap.set(".about .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
@@ -592,6 +618,8 @@
             markers: false
         });
 
+
+
         gsap.set(".foto_begin", { opacity: 0 })
 
         const ani3 = gsap.timeline();
@@ -601,7 +629,6 @@
             trigger: ".foto_begin",
             start: "top center",
             end: "bottom top",
-            toggleActions: "restart none none none",
             markers: false
         });
 
@@ -666,6 +693,19 @@
         //     });
 
         // section3
+
+        gsap.set("#section3 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
+
+        const skillcnt = gsap.timeline();
+        skillcnt.to("#section3 .sec__msg .char", { stagger: 0.01, duration: 0.2, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+        ScrollTrigger.create({
+            animation: skillcnt,
+            trigger: "#section3 .sec__msg .char",
+            start: "top center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: false
+        });
 
         const skillElements = document.querySelectorAll(".skill");
 
@@ -735,6 +775,18 @@
         gsap.to(img, { opacity: .8, duration: 3, ease: "none", yoyo: true, repeat: -1 });
 
 
+        gsap.set("#section4 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
+
+        const horicnt = gsap.timeline();
+        horicnt.to("#section4 .sec__msg .char", { stagger: 0.01, duration: 0.2, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+        ScrollTrigger.create({
+            animation: horicnt,
+            trigger: "#section4 .sec__msg .char",
+            start: "top center",
+            end: "bottom top",
+            toggleActions: "restart none none none",
+            markers: false
+        });
         // section5
 
         //contact
