@@ -27,6 +27,7 @@ body {
     line-height: 1;
     padding: 20px;
     font-family: "AfricaTrial-Rainfall";
+    color: var(--black);
 }
 
 #header .logo span {
@@ -870,12 +871,13 @@ body {
 
 #contact {
     width: 100%;
+    height: 100vh;
     background-color: #DAA39C;
     /* color: var(--white); */
 }
 
 #contact .contact {
-    padding: 100px;
+    padding: 6vw 6vw 4vw;
     font-size: 12vw;
     font-family: var(--fontNGL);
     line-height: 12.2vw;
@@ -885,7 +887,6 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-bottom: 70px;
 }
 
 #contact .text__info h5,

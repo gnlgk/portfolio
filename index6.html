@@ -491,49 +491,6 @@
     </script>
     <script>
 
-        // header
-
-        const headerToWhite = gsap.timeline();
-        headerToWhite.to("#header h1", { color: "#fff", duration: 0.5, ease: "power3.out" });
-        headerToWhite.to("#header .menu ul li", { color: "#fff", duration: 0.5, ease: "power3.out" }, 0);
-
-        const headerToBlack = gsap.timeline();
-        headerToBlack.to("#header h1", { color: "#000", duration: 0.5, ease: "power3.out" });
-        headerToBlack.to("#header .menu ul li", { color: "#000", duration: 0.5, ease: "power3.out" }, 0);
-
-        ScrollTrigger.create({
-            animation: headerToWhite,
-            trigger: '#section2',
-            start: "top 5%",
-            end: "top 30%",
-            toggleActions: "play none play none",
-            scrub: true,
-            markers: false,
-        });
-
-        ScrollTrigger.create({
-            animation: headerToBlack,
-            trigger: '#section4',
-            start: "top 5%",
-            end: () => "+=" + (document.querySelector('#section4').offsetWidth - window.innerWidth),
-            toggleActions: "play none play none",
-            scrub: true,
-            markers: false,
-            onEnter: () => { console.log('Enter section4'); },
-            onLeave: () => { console.log('Leave section4'); }
-        });
-
-        ScrollTrigger.create({
-            animation: headerToWhite,
-            trigger: '#section5 ',
-            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
-            end: "top top",
-            toggleActions: "play none play none",
-            scrub: true,
-            markers: true,
-            onEnter: () => console.log('Enter section5'),
-            onLeave: () => console.log(document.querySelector('#section4').offsetWidth - window.innerWidth)
-        });
 
         // section1
 
@@ -551,10 +508,10 @@
         const timerId = setTimeout(() => {
 
             tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-            tl.to("#header .logo", { opacity: 1, duration: 2 })
+            tl.to("#header .logo", { opacity: 1, color: "#000", duration: 2 })
             tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-            tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
-            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
+            tl.fromTo("#header .logo", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
+            tl.to("#header .menu ul li", { opacity: 1, color: "#000", stagger: 0.01, ease: "power2.inOut" }, "cc")
             tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
 
                 .eventCallback("onComplete", () => {
@@ -572,6 +529,59 @@
                 scrub: true,
                 markers: true
             }
+        });
+        // header
+
+        const headerToWhite = gsap.timeline();
+        headerToWhite.fromTo("#header h1", { color: "#000" }, { color: "#fff", duration: 0.1, ease: "power3.out" });
+        headerToWhite.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", duration: 0.1, ease: "power3.out" }, 0);
+
+        const headerToBlack = gsap.timeline();
+        headerToBlack.fromTo("#header h1", { color: "#fff" }, { color: "#000", duration: 0.1, ease: "power3.out" });
+        headerToBlack.fromTo("#header .menu ul li", { color: "#fff" }, { color: "#000", duration: 0.1, ease: "power3.out" }, 0);
+
+        ScrollTrigger.create({
+            animation: headerToWhite,
+            trigger: '#section2',
+            start: "top 5%",
+            end: "top 5%",
+            scrub: 1,
+            markers: false,
+            onEnter: () => { console.log('Enter section2'); },
+            onLeave: () => { console.log('Leave section2'); }
+        });
+
+        ScrollTrigger.create({
+            animation: headerToBlack,
+            trigger: '#section4',
+            start: "top 5%",
+            end: "top 5%",
+            scrub: 1,
+            markers: false,
+            onEnter: () => { console.log('Enter section4'); },
+            onLeave: () => { console.log('Leave section4'); }
+        });
+
+        ScrollTrigger.create({
+            animation: headerToWhite,
+            trigger: '#section5',
+            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
+            end: "top 5%",
+            scrub: 1,
+            markers: false,
+            onEnter: () => console.log(document.querySelector('#section4').offsetWidth),
+            onLeave: () => console.log('Leave section5')
+        });
+
+        ScrollTrigger.create({
+            animation: headerToBlack,
+            trigger: '#contact',
+            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
+            end: "top 5%",
+            scrub: 1,
+            markers: true,
+            onEnter: () => { console.log('Enter contact'); },
+            onLeave: () => { console.log('Leave contact'); }
         });
 
 
