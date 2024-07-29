@@ -224,7 +224,8 @@
                             4. React, node를 이용한 드라이브스루 사이트<br />
                         </li>
                         <li class="desc2">
-                            이곳에서는 제가 참여한 프로젝트와 그 성과를 만나보실 수 있습니다. 웹 개발 분야에서 다양한 프로젝트를 수행하며, 세심한 부분까지 신경 써서 독창적이고 효율적인
+                            이곳에서는 제가 참여한 프로젝트와 그 성과를 만나보실 수 있습니다.<br />
+                            웹 개발 분야에서 다양한 프로젝트를 수행하며, 세심한 부분까지 신경 써서 독창적이고 효율적인
                             결과물을 완성했습니다.
                         </li>
                     </ul>
@@ -238,12 +239,13 @@
                     <p>Project01</p>
                     <p>PHP를 이용한 연예인 <br />사진 모음 사이트입니다.</p>
                     <p>html / css / javascript</p>
-                    <p>VIEW</p>
-                    <span>
+
+                    <a href="http://wlsdks.dothome.co.kr/">
+                        <span>VIEW</span>
                         <div class="arrow"></div>
-                    </span>
+                    </a>
                 </div>
-                <div class="one"></div>
+                <div class="one"><a href="https://github.com/gnlgk/formyceleb">Github</a></div>
             </section>
             <section class="sec4__cont3">
                 <div class="imgWrap">
@@ -253,12 +255,13 @@
                     <p>Project02</p>
                     <p>React와 Python을<br /> 이용한 뮤직 사이트입니다.</p>
                     <p>react.js / javascript</p>
-                    <p>VIEW</p>
-                    <span>
+
+                    <a href="">
+                        <span>VIEW</span>
                         <div class="arrow"></div>
-                    </span>
+                    </a>
                 </div>
-                <div class="one"></div>
+                <div class="one"><a href="">Github</a></div>
             </section>
             <section class="sec4__cont4">
                 <div class="imgWrap">
@@ -268,12 +271,13 @@
                     <p>Project03</p>
                     <p>Vue와 API를<br /> 이용한 영화 사이트입니다.</p>
                     <p>vue.js / javascript</p>
-                    <p>VIEW</p>
-                    <span>
+
+                    <a href="https://vue-movie-virid.vercel.app/">
+                        <span>VIEW</span>
                         <div class="arrow"></div>
-                    </span>
+                    </a>
                 </div>
-                <div class="one"></div>
+                <div class="one"><a href="https://github.com/gnlgk/vue-movie">Github</a></div>
             </section>
             <section class="sec4__cont5">
                 <div class="imgWrap">
@@ -281,14 +285,15 @@
                 </div>
                 <div class="circle">
                     <p>Project04</p>
-                    <p>리액트와 노드를 이용한 <br />드라이브스루 사이트입니다.</p>
-                    <p>react.js / node.js</p>
-                    <p>VIEW</p>
-                    <span>
+                    <p>React와 Python을<br /> 이용한 뮤직 사이트입니다.</p>
+                    <p>react.js / javascript</p>
+
+                    <a href="https://music-youtube-chi.vercel.app/">
+                        <span>VIEW</span>
                         <div class="arrow"></div>
-                    </span>
+                    </a>
                 </div>
-                <div class="one"></div>
+                <div class="one"><a href="https://github.com/gnlgk/Music-youtube">Github</a></div>
             </section>
             <section class="sec4__cont6">
                 <div class="imgWrap">
@@ -298,12 +303,13 @@
                     <p>Project05</p>
                     <p>리액트와 노드를 이용한 <br />드라이브스루 사이트입니다.</p>
                     <p>react.js / node.js</p>
-                    <p>VIEW</p>
-                    <span>
+
+                    <a href="">
+                        <span>VIEW</span>
                         <div class="arrow"></div>
-                    </span>
+                    </a>
                 </div>
-                <div class="one"></div>
+                <div class="one"><a href="">Github</a></div>
             </section>
         </div>
         <div id="section5">
@@ -466,7 +472,23 @@
         let words = SplitClient.words;
         let chars = SplitClient.chars;
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const links = document.querySelectorAll('a');
 
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.getAttribute('href') === '') {
+                        e.preventDefault();  // 기본 링크 동작을 막음
+                        alert('작업 중입니다.');
+                        // 실제 링크로 이동하려면 다음 줄을 사용하세요:
+                        // window.location.href = e.target.href;
+                    }
+                });
+            });
+
+        });
+    </script>
     <script>
 
         // header
@@ -515,42 +537,42 @@
 
         // section1
 
-        // gsap.set("#section1 .nav__msg .char", { opacity: 0 })
-        // gsap.set("#header .logo", { opacity: 0 })
-        // gsap.set("#header .menu ul li", { opacity: 0 })
+        gsap.set("#section1 .nav__msg .char", { opacity: 0 })
+        gsap.set("#header .logo", { opacity: 0 })
+        gsap.set("#header .menu ul li", { opacity: 0 })
 
 
-        // const tl = gsap.timeline({
-        //     onComplete: function () {
-        //         lenis.stop();
-        //     }
-        // });
+        const tl = gsap.timeline({
+            onComplete: function () {
+                lenis.stop();
+            }
+        });
 
-        // const timerId = setTimeout(() => {
+        const timerId = setTimeout(() => {
 
-        //     tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
-        //     tl.to("#header .logo", { opacity: 1, duration: 2 })
-        //     tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
-        //     tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
-        //     tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
-        //     tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
+            tl.to("#section1 .nav__msg .char", { opacity: 1, stagger: 0.05, ease: "power2.inOut" })
+            tl.to("#header .logo", { opacity: 1, duration: 2 })
+            tl.to("#section1 .nav__msg .char", { opacity: 0, stagger: 0.02, ease: "power2.inOut" })
+            tl.fromTo("#header h1", { rotation: 180 }, { rotation: 360, duration: 2, ease: "power2.inOut" })
+            tl.to("#header .menu ul li", { opacity: 1, stagger: 0.01, ease: "power2.inOut" }, "cc")
+            tl.to("#section1 .black", { opacity: 0.8, duration: 1, ease: "power2.inOut" }, "cc")
 
-        //         .eventCallback("onComplete", () => {
-        //             lenis.start();
-        //         });
-        // }, 2000);
+                .eventCallback("onComplete", () => {
+                    lenis.start();
+                });
+        }, 2000);
 
 
-        // gsap.from(".logo", {
-        //     rotation: 360,
-        //     scrollTrigger: {
-        //         trigger: document.body,
-        //         start: "top #section1",
-        //         end: "bottom bottom",
-        //         scrub: true,
-        //         markers: true
-        //     }
-        // });
+        gsap.from(".logo", {
+            rotation: 360,
+            scrollTrigger: {
+                trigger: document.body,
+                start: "top #section1",
+                end: "bottom bottom",
+                scrub: true,
+                markers: true
+            }
+        });
 
 
         // section2
@@ -614,7 +636,6 @@
             trigger: ".about .sec__msg .char",
             start: "top center",
             end: "bottom top",
-            toggleActions: "restart none none none",
             markers: false
         });
 
@@ -703,7 +724,18 @@
             trigger: "#section3 .sec__msg .char",
             start: "top center",
             end: "bottom top",
-            toggleActions: "restart none none none",
+            markers: false
+        });
+
+        gsap.set("#section3 .skill", { opacity: 0, y: 10, rotationz: 10 })
+
+        const skill = gsap.timeline();
+        skill.to("#section3 .skill", { duration: 2, rotationz: 0, y: 0, opacity: 1, ease: "power3.inOut" })
+        ScrollTrigger.create({
+            animation: skill,
+            trigger: "#section3 .skill",
+            start: "top center",
+            end: "bottom top",
             markers: false
         });
 
@@ -784,7 +816,6 @@
             trigger: "#section4 .sec__msg .char",
             start: "top center",
             end: "bottom top",
-            toggleActions: "restart none none none",
             markers: false
         });
         // section5

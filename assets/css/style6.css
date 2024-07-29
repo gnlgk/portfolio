@@ -416,15 +416,11 @@ body {
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .sec4__cont1 {
     padding: 10vw;
     align-items: flex-start !important;
-
-
 }
 
 .sec4__cont1 .sec__title {
@@ -586,17 +582,11 @@ body {
     font-family: var(--fontNGL);
     line-height: 109%;
     text-align: center;
+    padding-bottom: 60px;
     /* position: relative; */
 }
 
-.circle p:nth-child(4) {
-    font-size: 25px;
-    margin-top: 12px;
-    text-align: left;
-    width: 55%;
-}
-
-.circle span {
+.circle a {
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -606,6 +596,17 @@ body {
     border: 1.5px solid var(--white);
     border-radius: 50px;
     cursor: pointer;
+}
+
+.circle a span {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    text-align: left;
+    width: 55%;
+    font-family: var(--fontNGL);
 }
 
 .arrow {
@@ -629,36 +630,46 @@ body {
     border-radius: 100%;
 }
 
+.one a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-family: var(--fontNGL);
+}
+
 .sec4__cont2 .one {
-    top: 75%;
-    left: 65%;
+    top: 60%;
+    left: 70%;
 }
 
 .sec4__cont3 .one {
     width: 100px;
     height: 100px;
-    top: 5%;
+    top: 40%;
     left: 30%;
 }
 
 .sec4__cont4 .one {
     width: 150px;
     height: 150px;
-    top: 10%;
+    top: 20%;
+    left: 50%;
 }
 
 .sec4__cont5 .one {
     width: 120px;
     height: 120px;
     top: 60%;
-    left: 40%;
+    left: 30%;
 }
 
 .sec4__cont6 .one {
     width: 100px;
     height: 100px;
     top: 30%;
-    left: 40%;
+    left: 80%;
 }
 
 /* #section5 */
