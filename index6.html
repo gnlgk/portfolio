@@ -533,19 +533,19 @@
         // header
 
         const headerToWhite = gsap.timeline();
-        headerToWhite.fromTo("#header h1", { color: "#000" }, { color: "#fff", duration: 0.1, ease: "power3.out" });
-        headerToWhite.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", duration: 0.1, ease: "power3.out" }, 0);
+        headerToWhite.fromTo("#header h1", { color: "#000" }, { color: "#fff", ease: "power1.out" });
+        headerToWhite.fromTo("#header .menu ul li", { color: "#000" }, { color: "#fff", ease: "power1.out" }, 0);
 
         const headerToBlack = gsap.timeline();
-        headerToBlack.fromTo("#header h1", { color: "#fff" }, { color: "#000", duration: 0.1, ease: "power3.out" });
-        headerToBlack.fromTo("#header .menu ul li", { color: "#fff" }, { color: "#000", duration: 0.1, ease: "power3.out" }, 0);
+        headerToBlack.fromTo("#header h1", { color: "#fff" }, { color: "#000", ease: "power1.out" });
+        headerToBlack.fromTo("#header .menu ul li", { color: "#fff" }, { color: "#000", ease: "power1.out" }, 0);
 
         ScrollTrigger.create({
             animation: headerToWhite,
             trigger: '#section2',
             start: "top 5%",
             end: "top 5%",
-            scrub: 1,
+            scrub: 0.1,
             markers: false,
             onEnter: () => { console.log('Enter section2'); },
             onLeave: () => { console.log('Leave section2'); }
@@ -556,7 +556,7 @@
             trigger: '#section4',
             start: "top 5%",
             end: "top 5%",
-            scrub: 1,
+            scrub: 0.1,
             markers: false,
             onEnter: () => { console.log('Enter section4'); },
             onLeave: () => { console.log('Leave section4'); }
@@ -567,7 +567,7 @@
             trigger: '#section5',
             start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
             end: "top 5%",
-            scrub: 1,
+            scrub: 0.1,
             markers: false,
             onEnter: () => console.log(document.querySelector('#section4').offsetWidth),
             onLeave: () => console.log('Leave section5')
@@ -578,7 +578,7 @@
             trigger: '#contact',
             start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
             end: "top 5%",
-            scrub: 1,
+            scrub: 0.1,
             markers: true,
             onEnter: () => { console.log('Enter contact'); },
             onLeave: () => { console.log('Leave contact'); }
