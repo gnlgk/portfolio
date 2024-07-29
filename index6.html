@@ -19,10 +19,10 @@
             </h1>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skill</a></li>
-                    <li><a href="#">Site</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#section2">About</a></li>
+                    <li><a href="#section3">Skill</a></li>
+                    <li><a href="#section4">Site</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -486,8 +486,8 @@
                     }
                 });
             });
-
         });
+
     </script>
     <script>
 
@@ -540,6 +540,8 @@
         headerToBlack.fromTo("#header h1", { color: "#fff" }, { color: "#000", ease: "power1.out" });
         headerToBlack.fromTo("#header .menu ul li", { color: "#fff" }, { color: "#000", ease: "power1.out" }, 0);
 
+        const section4Width = document.querySelector('#section4').offsetWidth - window.innerWidth;
+
         ScrollTrigger.create({
             animation: headerToWhite,
             trigger: '#section2',
@@ -565,7 +567,7 @@
         ScrollTrigger.create({
             animation: headerToWhite,
             trigger: '#section5',
-            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
+            start: () => "+=" + (section4Width - 50),
             end: "top 5%",
             scrub: 0.1,
             markers: false,
@@ -576,13 +578,14 @@
         ScrollTrigger.create({
             animation: headerToBlack,
             trigger: '#contact',
-            start: () => "+=" + ((document.querySelector('#section4').offsetWidth - window.innerWidth) - 50),
+            start: () => "+=" + (section4Width - 50),
             end: "top 5%",
             scrub: 0.1,
             markers: true,
             onEnter: () => { console.log('Enter contact'); },
             onLeave: () => { console.log('Leave contact'); }
         });
+
 
 
         // section2
@@ -726,24 +729,14 @@
         // section3
 
         gsap.set("#section3 .sec__msg .char", { opacity: 0, y: 10, rotationz: 10 })
+        gsap.set("#section3 .skill", { opacity: 0, y: 10, rotationz: 10 })
 
         const skillcnt = gsap.timeline();
         skillcnt.to("#section3 .sec__msg .char", { stagger: 0.01, duration: 0.2, rotationz: 0, y: 0, opacity: 1, ease: "power3.out" })
+            .to("#section3 .skill", { duration: 2, rotationz: 0, y: 0, opacity: 1, ease: "power3.inOut" })
         ScrollTrigger.create({
             animation: skillcnt,
             trigger: "#section3 .sec__msg .char",
-            start: "top center",
-            end: "bottom top",
-            markers: false
-        });
-
-        gsap.set("#section3 .skill", { opacity: 0, y: 10, rotationz: 10 })
-
-        const skill = gsap.timeline();
-        skill.to("#section3 .skill", { duration: 2, rotationz: 0, y: 0, opacity: 1, ease: "power3.inOut" })
-        ScrollTrigger.create({
-            animation: skill,
-            trigger: "#section3 .skill",
             start: "top center",
             end: "bottom top",
             markers: false
@@ -813,6 +806,7 @@
                 }
             }
         });
+
         gsap.to(one, { scale: 0.5, duration: 5, ease: "none", yoyo: true, repeat: -1 });
         gsap.to(img, { opacity: .8, duration: 3, ease: "none", yoyo: true, repeat: -1 });
 
