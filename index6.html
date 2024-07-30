@@ -314,48 +314,81 @@
         </div>
         <div id="section5">
             <div class="title">
-                <h4>COMMENT</h4>
-                <input type="text" placeholder="여기에 댓글을 써주세요!" />
+                <div class="sec__title split">
+                    Comment
+                </div>
+                <div class="sec__msg split">
+                    <ul>
+                        <li class="desc2">
+                            포트폴리오를 보시고 의견이나 피드백을 남겨주시면 감사하겠습니다. 궁금한 점이나 질문이 있으시면 자유롭게 댓글을 남겨 주세요. 여러분의 소중한 의견을 기다리고
+                            있습니다.
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="masonry">
                 <div class="item">
                     <div class="item__content">
-                        <div class="text">
-                            사이트가 너무 이쁩니다.
-                            저도 이렇게 만들고 싶어요!
-                        </div>
-                        <div class="date">
-                            2023.04.04 누군가가
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item__content item__content--small">
-                        <div class="text">
-                            사이트가 너무 이쁩니다.
-                        </div>
-                        <div class="date">
-                            2023.04.04 누군가가
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item__content item__content--medium">
-                        <div class="text">
-                            사이트가 너무 이쁩니다.
-                            저도 이렇게 만들고 싶어요!
-                        </div>
-                        <div class="date">
-                            2023.04.04 누군가가
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                                저도 이렇게 만들고 싶어요!
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="item__content item__content--small">
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="item__content item__content--medium">
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                                저도 이렇게 만들고 싶어요!
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__content item__content--small">
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                                저도 이렇게 만들고 싶어요!
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__content item__content--medium">
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                                저도 이렇게 만들고 싶어요!
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -364,12 +397,14 @@
                 </div>
                 <div class="item">
                     <div class="item__content item__content--large">
-                        <div class="text">
-                            사이트가 너무 이쁩니다.
-                            저도 이렇게 만들고 싶어요!
-                        </div>
-                        <div class="date">
-                            2023.04.04 누군가가
+                        <div class="blur">
+                            <div class="text">
+                                사이트가 너무 이쁩니다.
+                                저도 이렇게 만들고 싶어요!
+                            </div>
+                            <div class="date">
+                                2023.04.04 누군가가
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -419,6 +454,14 @@
                 </div>
                 <div class="item">
                     <div class="item__content item__content--small">
+                        <div class="blur">
+                            <div class="cmt__input">
+                                <div>댓글쓰기</div>
+                                <input type="text" placeholder="100자 이내의 글을 입력해주세요.">
+                                <input type="text" placeholder="이름을 입력해주세요!">
+                                <button type="submit">등록</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -835,7 +878,6 @@
             trigger: ".contact .char",
             start: "top center",
             end: "bottom top",
-            toggleActions: "restart none none none",
             markers: false
         });
 
