@@ -46,6 +46,9 @@
                     </div>
                 </div>
             </div>
+            <div class="progress">
+                <div class="percent" data-percent="100">0%</div>
+            </div>
         </div>
         <div id="section2">
             <div class="about">
@@ -441,30 +444,30 @@
             </div>
 
         </div>
-    </div>
-    <div id="contact">
-        <div class="contact split">Contact<br /> me</div>
-        <div class="text__info">
-            <div>
-                <h5>You can also find me on</h5>
-                <ul>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Figma</a></li>
-                </ul>
-            </div>
-            <div>
-                <p>
-                    <a href="#">fdcwrt@gmail.com</a>
-                </p>
-                <p>CERTIFICATE</p>
-                <p class="kor">정보처리 기능사</p>
-                <p class="kor">웹디자인 기능사</p>
-                <p class="kor">컴퓨터활용능력 1급</p>
+        <div id="contact">
+            <div class="contact split">Contact<br /> me</div>
+            <div class="text__info">
+                <div>
+                    <h5>You can also find me on</h5>
+                    <ul>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Figma</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        <a href="#">fdcwrt@gmail.com</a>
+                    </p>
+                    <p>CERTIFICATE</p>
+                    <p class="kor">정보처리 기능사</p>
+                    <p class="kor">웹디자인 기능사</p>
+                    <p class="kor">컴퓨터활용능력 1급</p>
+                </div>
             </div>
         </div>
-    </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -505,6 +508,8 @@
                     }
                 });
             });
+
+            console.log(event)
         });
 
     </script>
@@ -515,8 +520,13 @@
         gsap.set("#header .logo", { opacity: 0 })
         gsap.set("#header .menu ul li", { opacity: 0 })
 
+        const progressBar = document.querySelector('.progress .percent');
 
         const tl = gsap.timeline({
+            onUpdate: function () {
+                const progress = tl.progress() * 100;
+                progressBar.textContent = `${Math.round(progress)}%`;
+            },
             onComplete: function () {
                 lenis.stop();
             }
@@ -535,7 +545,6 @@
                     lenis.start();
                 });
         }, 2000);
-
 
         gsap.from(".logo", {
             rotation: 360,
@@ -856,5 +865,7 @@
             end: "bottom top",
             markers: false
         });
+
+
 
     </script>
